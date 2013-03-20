@@ -1,0 +1,41 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+.hero-unit {
+	background-image: url(../img/BTV.jpg);
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+@media screen and (max-width:635px) {
+
+	.hero-unit {
+		background-image: none;
+	}
+
+}
+
+@media screen and (max-width:988px) {
+
+	.hero-unit {
+		background-position: right center; 
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
