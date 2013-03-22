@@ -3,14 +3,6 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-.row-fluid {
-*zoom: 1;
-
-margin-top: 2em;
-}
-
-
 .hero-unit {
 	background-image: url(../img/BTV.jpg);
 	background-repeat: no-repeat;
