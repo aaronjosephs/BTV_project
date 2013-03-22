@@ -58,10 +58,10 @@
                 <div class="span4">
                     <h2>Join BTV</h2>
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                    <p><a class="btn" href="https://sphotos-b.xx.fbcdn.net/hphotos-snc7/421703_10151178161446846_1533245278_n.jpg">View details &raquo;</a></p>
+                    <p><a class="btn" href="https://www.facebook.com/BinghamtonTelevision">View details &raquo;</a></p>
                 </div>
 
-                <div id="ytplayer" class="span8"></div>
+                <div id="FeaturedShow" class="span8"></div>
             </div>
 
 
@@ -84,14 +84,16 @@
           var firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-          // Replace the 'ytplayer' element with an <iframe> and
+          // Replace the 'FeaturedShow' element with an <iframe> and
           // YouTube player after the API code downloads.
           var player;
           function onYouTubePlayerAPIReady() {
-            player = new YT.Player('ytplayer', {
+            player = new YT.Player('FeaturedShow', {
               height: '390',
               width: '640',
-              videoId: 'IDBkg8JJRHk'
+              videoId: 'IDBkg8JJRHk',
+              enablejsapi: '1',
+              controls: '2'
             });
   }
 </script>
