@@ -9,12 +9,15 @@
 	background-position: center; 
 }
 
+.nav-header {
+	background: black;
+}
+
 @media screen and (max-width:635px) {
 
 	.hero-unit {
 		background-image: none;
 	}
-
 }
 
 @media screen and (max-width:988px) {
@@ -22,7 +25,6 @@
 	.hero-unit {
 		background-position: right center; 
 	}
-
 }
 
 
