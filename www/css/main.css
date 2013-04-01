@@ -1,5 +1,3 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -9,22 +7,41 @@
 	background-position: center; 
 }
 
-.nav-header {
-	background: black;
-}
+
 
 @media screen and (max-width:635px) {
-
 	.hero-unit {
 		background-image: none;
 	}
 }
 
 @media screen and (max-width:988px) {
-
 	.hero-unit {
 		background-position: right center; 
 	}
+}
+
+.contact-title {
+	color: #99FF33;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+}
+
+.contact-nav {
+	vertical-align: middle;
+	height:5em;
+}
+.contact-nav1 {
+	background: #FF9900;
+}
+.contact-nav1:hover {
+	background: #99FF33;
+}
+.contact-nav2 {
+	background: #FFFF33;
+}
+.contact-nav2:hover {
+	background: #99FF33;
 }
 
 
