@@ -72,7 +72,12 @@
 	color: #E0FFD6;
 }
 
-
+body{
+    background-image: url(../img/textured_paper.png);
+    background-repeat;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
 
 
 
