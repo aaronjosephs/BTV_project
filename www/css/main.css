@@ -7,18 +7,16 @@
 	background-position: center; 
 }
 
-
+@media screen and (min-width: 1000px){
+	.hero-unit { margin-top: 3em; }
+}
 
 @media screen and (max-width:635px) {
-	.hero-unit {
-		background-image: none;
-	}
+	.hero-unit { background-image: none; }
 }
 
 @media screen and (max-width:988px) {
-	.hero-unit {
-		background-position: right center; 
-	}
+	.hero-unit { background-position: right center; }
 }
 
 .contact-title-circle {
@@ -31,6 +29,7 @@
 	border-radius: 50%;
 	z-index: -1;
 }
+
 .contact-title {
 	color: #999999;
 }
@@ -45,7 +44,7 @@
 }
 
 .contact-image {
-	width:245px;
+	width: 245px;
 	height: 200px;
 }
 
@@ -62,7 +61,6 @@
 	color: #E0FFD6;
 }
 
-
 .contact-info {
 	width: 80%;
 	position: absolute;
@@ -75,9 +73,6 @@
 body{
     background-image: url(../img/textured_paper.png);
     background-repeat;
-    padding-top: 60px;
+    /*padding-top: 60px;*/ /* was pushing down navigation bar when hambuger button present @ < 900 px wide*/
     padding-bottom: 40px;
 }
-
-
-
