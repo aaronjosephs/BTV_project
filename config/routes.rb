@@ -1,7 +1,8 @@
 BTVProject::Application.routes.draw do
-  resources :posts
 
-  resources :users
+  match "/board" => "board#index"
+  resource :board 
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
