@@ -1,7 +1,12 @@
 BTVProject::Application.routes.draw do
+  resources :authentications
+
   resources :posts
 
   resources :users
+
+  # Redirects authentication callback for omniAuth
+  match '/auth/:provider/callback' => 'authentications#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
