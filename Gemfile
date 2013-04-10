@@ -8,8 +8,17 @@ group :development do
 	gem 'sqlite3', '1.3.5'
 	gem 'ruby-debug19', :require => 'ruby-debug'
 end
+
 group :production do
   gem 'pg'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'turn', :require => false
 end
 
 # Gems used only for assets and not required
@@ -31,8 +40,4 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
 gem 'haml'
