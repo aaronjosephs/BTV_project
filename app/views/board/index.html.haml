@@ -5,19 +5,19 @@
       %ul.nav.nav-tabs.nav-stacked
         %li.nav-header Eboard
         %li.active
-          %a{:href => "contact"} Executive Board
+          =link_to "Executive Board", board_path
         %li
-          %a{:href => "production-board?production=1"} Production Board
+          =link_to "Production Board", board_path(:production =>"yes")
         %li.nav-header
           Contact information
         %li
           %a{:href => "contact-message"} Send us a message
         %li
-          %a{:href => "mailto:xxx@TheNewBTV.com"} Email: xxx@TheNewBTV.com
+          %a{:href => "mailto:president@TheNewBTV.com"} Email: president@TheNewBTV.com
         %li
-          %a{:href => "#"} Address: xxx, xxx, UU
+          %a{:href => "http://goo.gl/maps/1ntHz"} Address: BU Union Room B14
         %li
-          %a{:href => "#"} Facebook: xxx.facbook.com
+          %a{:href => "https://www.facebook.com/btvsix"} Facebook
       %div
         %form.form-search
           %input.input-medium.search-query{:type => "text"}

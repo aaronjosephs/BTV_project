@@ -74,5 +74,5 @@ body{
     background-image: url(../img/textured_paper.png);
     background-repeat;
     /*padding-top: 60px;*/ /* was pushing down navigation bar when hambuger button present @ < 900 px wide*/
-    padding-bottom: 40px;
+    /*padding-bottom: 40px;
 }

@@ -73,6 +73,6 @@
 body{
     background-image: url(/assets/textured_paper.png);
     background-repeat;
-    padding-top: 60px;*/ /* was pushing down navigation bar when hambuger button present @ < 900 px wide*/
-    padding-bottom: 40px;
+    /*padding-top: 60px;*/ /* was pushing down navigation bar when hambuger button present @ < 900 px wide*/
+    /*padding-bottom: 40px;
 }
