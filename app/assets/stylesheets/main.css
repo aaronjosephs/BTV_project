@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.hero-unit {
+	background-image: url(/assets/BTV.jpg);
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+@media screen and (min-width: 1000px){
+	.hero-unit { margin-top: 3em; }
+}
+
+@media screen and (max-width:635px) {
+	.hero-unit { background-image: none; }
+}
+
+@media screen and (max-width:988px) {
+	.hero-unit { background-position: right center; }
+}
+
+.contact-title-circle {
+	position: absolute;
+	top: 500px;
+	left: -200px;
+	background: #F0FFF0;
+	width: 1000px;
+	height: 1000px;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+.contact-title {
+	color: #999999;
+}
+
+.contact-image-box {
+	position: relative;
+	width: auto;
+	height: 210px;
+	overflow: hidden;
+	background: #E0FFD6;
+	border-radius: 1%;
+}
+
+.contact-image {
+	width: 245px;
+	height: 200px;
+}
+
+.contact-image:hover {
+	opacity: 0.8;
+}
+
+.contact-name {
+	width: 70%;
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	background-color: rgba(0,0,0, 0.7);
+	color: #E0FFD6;
+}
+
+.contact-info {
+	width: 80%;
+	position: absolute;
+	top: 175px;
+	right: 2px;
+	background-color: rgba(0,0,0, 0.7);
+	color: #E0FFD6;
+}
+
+body{
+    background-image: url(/assets/textured_paper.png);
+    background-repeat;
+    /*padding-top: 60px;*/ /* was pushing down navigation bar when hambuger button present @ < 900 px wide*/
+    /*padding-bottom: 40px;
+}
