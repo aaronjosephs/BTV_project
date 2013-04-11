@@ -8,7 +8,8 @@ class HomeController < ApplicationController
     if params[:argu] == "whatwedo"
       @whatwedo_active = "active"
       @title = "WHAT WE DO"
-      @info = ""
+      @info = [
+        "Act as an available resource to the student body to aid in the production of media projects. These projects range from personal films, professional shorts, graphic design, video editing, audio editing, class projects, etc.", "Serve as a public media outlet by broadcasting student-made media.", "Serve as a public communication outlet via commericals, graphic design slides, and other forms of media advertisement.", "Promote a strong sense of Binghamton University pride and spirit."]
     else
       @whoweare_active = "active"
       @title = "WHO WE ARE"

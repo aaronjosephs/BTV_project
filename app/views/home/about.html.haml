@@ -12,6 +12,13 @@
       %h1
         About BTV -
         = @title
-      %p
         
+      - if @title == "WHO WE ARE"
+        %p
         = @info
+      - else
+        %p
+          %ul
+            - @info.each do |i|
+              %li
+                = i
