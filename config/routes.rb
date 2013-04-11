@@ -1,8 +1,19 @@
 BTVProject::Application.routes.draw do
+  get "home/index"
+
+  get "home/about"
+
   resources :posts
 
   resources :users
 
+  match "about" => "home#about"
+  match "board" => "home#board"
+  match "shows" => "home#shows"
+  match "schedule" => "home#schedule"
+  match "join" => "home#join"
+  root :to => "home#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
