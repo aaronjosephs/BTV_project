@@ -10,11 +10,10 @@ Scenario Outline: loading pages from the address bar
 #Then I am, in fact, there.
 
   Examples: pages
-# Could probably use a few more pages.
-# Add them in once they exist.
     | page     |
     | Home     |
     | About    |
+    | Board    |
 
 Scenario Outline: navigation via the navigation bar
   When I am on the <from> page
@@ -25,7 +24,9 @@ Scenario Outline: navigation via the navigation bar
     | from     | to       |
     | Home     | Home     |
     | Home     | About    |
+    | Home     | Board    |
     | About    | Home     |
+    | Board    | Home     |
 
 Scenario Outline: navigation via the BTV logo
   When I am on the <from> page
@@ -36,3 +37,4 @@ Scenario Outline: navigation via the BTV logo
     | from     |
     | Home     |
     | About    |
+    | Board    |

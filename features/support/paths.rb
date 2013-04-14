@@ -37,6 +37,9 @@ module NavigationHelpers
         when 'About'
           '/about'
 
+        when 'Board'
+          pending "pending board page integration"
+
         else
           path_components = $1.split(/\s+/)
           self.send(path_components.push('path').join('_').to_sym)
