@@ -1,6 +1,8 @@
 BTVProject::Application.routes.draw do
   match "/executive_board" => "board#index"
   resource :board 
+  resources :authentications
+  resources :posts
 
 
   match "about" => "home#about"
@@ -9,7 +11,7 @@ BTVProject::Application.routes.draw do
   match "schedule" => "home#schedule"
   match "join" => "home#join"
   root :to => "home#index"
-  
+  match '/auth/:provider/callback' => 'authentications#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
