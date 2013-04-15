@@ -1,6 +1,51 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/
-.sass-cache/
+### Rails ###
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+.rvmrc
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+/app/assets/stylesheets/bootstrap.min.css
+/app/assets/stylesheets/bootstrap-responsive.min.css
+**.orig
+rerun.txt
+pickle-email-*.html
+.project
+
+### OSX ###
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+### Linux ###
+.*
+!.gitignore
+*~
+
+### Windows ###
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/

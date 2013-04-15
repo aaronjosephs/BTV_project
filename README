@@ -1,3 +1,4 @@
+
 BTV -- Binghamton University's student-run television station.
 
 I'm proposing we keep some documentation here on assumptions made by cucumber about the views.
@@ -7,3 +8,4 @@ CUCUMBER ASSUMPTIONS
   On any page containing the navigation bar: 
 - the navigation bar should be contained within something having the id #navbar
 - the BTV logo should have the id #BTV_logo
+
