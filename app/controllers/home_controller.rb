@@ -17,8 +17,12 @@ class HomeController < ApplicationController
     end
   end
   
-  def board
-    @board_active = "active"
+  def executive_board
+    @executive_board_active = "active"
+  end
+ 
+  def production_board
+    @production_board_active = "active"
   end
   
   def shows
