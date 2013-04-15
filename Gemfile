@@ -16,12 +16,9 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
-<<<<<<< HEAD
-=======
-  gem 'cucumber-rails-training-wheels' #Virtually everyone still needs these.
->>>>>>> 09303896c807f16982d884fcd50e64b1056d0e0c
   gem 'capybara', '2.0.3'
   gem 'database_cleaner'
+  gem 'turn', :require => false
 end
 
 # Gems used only for assets and not required
@@ -42,3 +39,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
