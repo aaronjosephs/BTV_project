@@ -1,4 +1,6 @@
 BTVProject::Application.routes.draw do
+  resources :videos
+
   resources :posts
 
   resources :users
