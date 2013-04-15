@@ -1,7 +1,8 @@
 class BoardController < ApplicationController
 
 	def index
-		puts "here"
+		 puts params[:production]
+		/@boardMembers = User.all/
 	end
 
 	def show

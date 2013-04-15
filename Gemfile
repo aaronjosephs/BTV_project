@@ -15,10 +15,12 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'minitest'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'turn', :require => false
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
 end
 
 # Gems used only for assets and not required
