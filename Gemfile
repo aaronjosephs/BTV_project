@@ -16,7 +16,7 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
-  gem 'capybara'
+  gem 'capybara', '2.0.3'
   gem 'database_cleaner'
   gem 'turn', :require => false
 end
