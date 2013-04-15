@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title B-TV Board
+    %title B-TV 
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     :css
@@ -31,7 +31,7 @@
                 %a{:href => "/"} Home
               %li{:class => @about_active}
                 %a{:href => "about"} About
-              %li{:class => @executive_board_active}
+              %li{:class => @board}
                 %a{:href => "executive_board"} Board
               %li{:class => @shows_active}
                 %a{:href => "shows"} Shows

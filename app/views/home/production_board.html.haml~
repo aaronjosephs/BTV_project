@@ -8,7 +8,7 @@
             %br
               %ul.nav.nav-tabs.nav-stacked
                 %li.nav-header Eboard
-                %li{:class => @executive_board_active}
+                %li{:class => @board_active}
                   %a{:href => "executive_board"} Executive Board
                 %li.active
                   %a{:href => "production_board"} Production Board
@@ -52,7 +52,7 @@
                   .thumbnail
                     %a{:href => "http://about.me/kbenard1"}
                       .contact-image-box
-                        %img.img-rounded.contact-image{:alt => "", :src => "images/Contact.jpg"}
+                        %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                           %h4.contact-name
                             %span
                               Kyle Benardos
@@ -61,7 +61,7 @@
                   .thumbnail
                     %a{:href => "#"}
                       .contact-image-box
-                        %img.img-rounded.contact-image{:alt => "", :src => "Contact.jpg"}
+                        %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                           %h4.contact-name
                             %span
                               Melissa Edelblum
@@ -82,7 +82,7 @@
                       .thumbnail
                         %a{:href => "http://about.me/mlinehan"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h4.contact-name
                                 %span
                                   Maura Linehan
@@ -91,7 +91,7 @@
                       .thumbnail
                         %a{:href => "http://about.me/ahmed.khater"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h4.contact-name
                                 %span
                                   Ahmed Khater
@@ -100,7 +100,7 @@
                       .thumbnail
                         %a{:href => "#"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h4.contact-name
                                 %span
                                   Ben Moosher
@@ -112,7 +112,7 @@
                           .thumbnail
                             %a{:href => "http://about.me/schechter"}
                               .contact-image-box
-                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                                   %h4.contact-name
                                     %span
                                       Patrick Schechter
@@ -121,7 +121,7 @@
                           .thumbnail
                             %a{:href => "http://about.me/jtorregrossa"}
                               .contact-image-box
-                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                                   %h4.contact-name
                                     %span
                                       Joseph Torregrossa
@@ -130,7 +130,7 @@
                           .thumbnail
                             %a{:href => "http://about.me/dmirsky1#biography"}
                               .contact-image-box
-                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                                   %h4.contact-name
                                     %span
                                       David Mirsky
@@ -142,7 +142,7 @@
                               .thumbnail
                                 %a{:href => "http://about.me/danielle_micceri"}
                                   .contact-image-box
-                                    %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                    %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                                       %h4.contact-name
                                         %span
                                           Danielle Micceri

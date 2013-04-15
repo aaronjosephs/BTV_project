@@ -5,8 +5,8 @@
       %ul.nav.nav-tabs.nav-stacked
         %li.nav-header Eboard
         %li.active
-          %a{:href => "contact"} Executive Board
-        %li{:class => @production_board}
+          %a{:href => "executive_board"} Executive Board
+        %li{:class => @board_active}
           %a{:href => "production_board"} Production Board
         %li.nav-header
           Contact information
@@ -48,7 +48,7 @@
                   .thumbnail
                     %a{:href => "http://about.me/AlexKleiner"}
                       .contact-image-box
-                        %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                        %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                           %h4.contact-name
                             %span
                               Alex Kleiner
@@ -60,7 +60,7 @@
                   .thumbnail
                     %a{:href => "http://about.me/MichaelZagreda"}
                       .contact-image-box
-                        %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                        %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                           %h4.contact-name
                             %span
                               Michael Zagreda
@@ -72,7 +72,7 @@
                   .thumbnail
                     %a{:href => "http://about.me/justin.ziske"}
                       .contact-image-box
-                        %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                        %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                           %h4.contact-name
                             %span
                               Justin Ziske
@@ -87,7 +87,7 @@
                       .thumbnail
                         %a{:href => "http://about.me/kaitcallahan"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h5.contact-name
                                 %span
                                   Kaitlyn Callahan
@@ -99,7 +99,7 @@
                       .thumbnail
                         %a{:href => "#"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h4.contact-name
                                 %span
                                   Scott Sommer
@@ -111,7 +111,7 @@
                       .thumbnail
                         %a{:href => "#"}
                           .contact-image-box
-                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                            %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                               %h4.contact-name
                                 %span
                                   Ethan Race
@@ -126,7 +126,7 @@
                           .thumbnail
                             %a{:href => "http://about.me/joltjared"}
                               .contact-image-box
-                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                %img.img-rounded.contact-image{:alt => "", :src => "assets/Contact.jpg"}
                                   %h4.contact-name
                                     %span
                                       Jared Buinno
