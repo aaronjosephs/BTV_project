@@ -15,8 +15,11 @@ module HtmlSelectorsHelpers
 
     when "the page"
       "html > body"
+<<<<<<< HEAD
+=======
     when "the navigation bar"
       "#navbar"
+>>>>>>> master
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

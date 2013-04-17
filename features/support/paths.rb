@@ -13,9 +13,24 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+<<<<<<< HEAD
+    when /^Production Board/
+      "/board?production=yes"
+
     when /^the home\s?page$/
       '/'
 
+    when /^board page/
+      "/board"
+
+    when /^AboutMe/
+      "/"
+
+=======
+    when /^the home\s?page$/
+      '/'
+
+>>>>>>> master
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -25,6 +40,10 @@ module NavigationHelpers
     else
       begin
         page_name =~ /^the (.*) page$/
+<<<<<<< HEAD
+        path_components = $1.split(/\s+/)
+        self.send(path_components.push('path').join('_').to_sym)
+=======
 
         # But add mappings of the form: the ???? page  here.
         # The else case may work for expressions defined with
@@ -44,6 +63,7 @@ module NavigationHelpers
           path_components = $1.split(/\s+/)
           self.send(path_components.push('path').join('_').to_sym)
         end
+>>>>>>> master
       rescue NoMethodError, ArgumentError
         raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
           "Now, go and add a mapping in #{__FILE__}"

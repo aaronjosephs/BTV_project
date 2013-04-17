@@ -1,3 +1,5 @@
+B-TV 6 Project!
+
 
 BTV -- Binghamton University's student-run television station.
 
@@ -8,4 +10,3 @@ CUCUMBER ASSUMPTIONS
   On any page containing the navigation bar: 
 - the navigation bar should be contained within something having the id #navbar
 - the BTV logo should have the id #BTV_logo
-

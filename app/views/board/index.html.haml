@@ -4,9 +4,9 @@
     .span3
       %ul.nav.nav-tabs.nav-stacked
         %li.nav-header Eboard
-        %li.active
+        %li{class:@query.nil? && "active"}
           =link_to "Executive Board", board_path
-        %li
+        %li{class:! @query.nil? && "active"}
           =link_to "Production Board", board_path(:production =>"yes")
         %li.nav-header
           Contact information
@@ -33,16 +33,20 @@
               .controls
                 %button.btn{:type => "submit"} Send
     .span9
-      .contact-title-circle
+      .contact-title-circle 
       .row-fluid.text-center
         .page-header
+        -if @query.nil?
           %h2.contact-title Our Executive Board
+        -else 
+          %h2.contact-title Our Production Board
         %div
           %p Description
           %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
         %br
           %br
             .row-fluid
+            -if @query.nil?
               %ul.thumbnails
                 %li.span4
                   .thumbnail
