@@ -1,0 +1,6 @@
+#Changed by Charles when installing omniauth
+en:  hello: "Hello world"
+  fail: 'Authentication FAIL!!'
+  success: 'Authentication SUCCESS!!!'
+  signed_in: 'Signed in'
+  welcome: 'Welcome!'
