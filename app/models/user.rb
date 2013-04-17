@@ -1,3 +1,4 @@
 class User < ActiveRecord::Base
-	references_many :authentications, :dependent => :delete
+	has_many :authentications
+	validates :name, :email, :presence => true
 end
