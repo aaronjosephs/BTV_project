@@ -14,8 +14,17 @@ BTVProject::Application.routes.draw do
   match "shows" => "home#shows"
   match "schedule" => "home#schedule"
   match "join" => "home#join"
+  match "Juncture" => "home#Juncture"
+  match "BTV_News" => "home#BTV_News"
+  match "Binghamton_Bro_Code" => "home#Binghamton_Bro_Code"
+  match "BTV_Mornings" => "home#BTV_Mornings"
+  match "Cup_of_Joe" => "home#Cup_of_Joe"
+  match "Common_Occurances" => "home#Common_Occurances"
+  match "Gametime!" => "home#Gametime!"
+  match "What_4" => "home#What_4"
+  match "Comics_Anonymous" => "home#Comics_Anonymous"
   root :to => "home#index"
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
