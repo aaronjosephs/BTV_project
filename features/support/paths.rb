@@ -13,6 +13,9 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    when /^Production Board/
+      "/board?production=yes"
+
     when /^the home\s?page$/
       '/'
 
