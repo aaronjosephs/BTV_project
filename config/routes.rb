@@ -1,11 +1,4 @@
 BTVProject::Application.routes.draw do
-  get "home/index"
-
-  get "home/about"
-
-  resources :posts
-
-  resources :users
 
   match "about" => "home#about"
   match "executive_board" => "home#executive_board"
