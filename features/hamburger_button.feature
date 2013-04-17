@@ -1,11 +1,15 @@
+@javascript
 Feature: hamburger button
 
   As a mobile or otherwise space-restricted user
   So that I can access the navigation bar when I don't have much space
   I want to click on the hamburger button to show the navigation bar
 
+Background:
+  Given the navigation bar is prepared to respond
+
 Scenario: no button when I have enough space
-  Given the window is 400 pixels wide
+  Given the window is 800 pixels wide
   When I am on the home page
   Then I should not see the hamburger button
   And I should see "Home"
