@@ -16,25 +16,34 @@ class HomeController < ApplicationController
       @info = "TheNewBTV (Binghamton Television - Channel 6) is one of only a few entirely student-run college television stations in the United States. TheNewBTV serves as both a public media outlet and professional aid to student productions. We thrive off of the individual and collective creativity of our student body and the professionalism of our Executive Board. Our members receive industry grade experience in the fields of television, drama, broadcasting, marketing, communications, graphic design, and journalism"
     end
   end
-  
+
   def executive_board
     @executive_board_active = "active"
     @board_active = "active"
   end
- 
+
   def production_board
     @production_board_active = "active"
     @board_active = "active"
   end
-  
+
   def shows
     @shows_active = "active"
+    @juncture_active = "active"
+    @btv_news_active = "active"
+    @binghamton_bro_code_active = "active"
+    @btv_mornings_active = "active"
+    @cup_of_joe_active = "active"
+    @common_occurances_active = "active"
+    @gametime_active = "active"
+    @what_4_active = "active"
+    @comics_anonymous_active = "active"
   end
-  
+
   def schedule
     @schedule_active = "active"
   end
-  
+
   def join
     @join_active = "active"
   end

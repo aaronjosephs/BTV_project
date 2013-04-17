@@ -1,17 +1,30 @@
 BTVProject::Application.routes.draw do
-  match "/executive_board" => "board#index"
-  resource :board 
-  resources :authentications
+  get "home/index"
+
+  get "home/about"
+
   resources :posts
 
+  resources :users
 
   match "about" => "home#about"
+  match "executive_board" => "home#executive_board"
   match "contact" => "home#contact"
+  match "production_board" => "home#production_board"
   match "shows" => "home#shows"
   match "schedule" => "home#schedule"
   match "join" => "home#join"
+  match "Juncture" => "home#Juncture"
+  match "BTV_News" => "home#BTV_News"
+  match "Binghamton_Bro_Code" => "home#Binghamton_Bro_Code"
+  match "BTV_Mornings" => "home#BTV_Mornings"
+  match "Cup_of_Joe" => "home#Cup_of_Joe"
+  match "Common_Occurances" => "home#Common_Occurances"
+  match "Gametime!" => "home#Gametime!"
+  match "What_4" => "home#What_4"
+  match "Comics_Anonymous" => "home#Comics_Anonymous"
   root :to => "home#index"
-  match '/auth/:provider/callback' => 'authentications#create'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
