@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'activerecord-postgresql-adapter'
+gem 'pg'
+
 # gem 'omniauth-identity'
 
 # Use unicorn as the web server
