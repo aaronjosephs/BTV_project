@@ -1,7 +1,8 @@
 class BoardController < ApplicationController
 
 	def index
-		puts "here"
+		 @query = params[:production]
+		 puts @query
 	end
 
 	def show

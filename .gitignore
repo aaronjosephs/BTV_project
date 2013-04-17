@@ -1,3 +1,4 @@
+
 ### Rails ###
 *.rbc
 *.sassc
@@ -19,6 +20,7 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .project
+Gemfile.lock
 
 ### OSX ###
 .DS_Store
@@ -49,3 +51,10 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+.DS_Store
+
