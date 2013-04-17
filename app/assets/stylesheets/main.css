@@ -19,19 +19,9 @@
 	.hero-unit { background-position: right center; }
 }
 
-.contact-title-circle {
-	position: absolute;
-	top: 500px;
-	left: -200px;
-	background: #F0FFF0;
-	width: 1000px;
-	height: 1000px;
-	border-radius: 50%;
-	z-index: -1;
-}
 
 .contact-title {
-	color: #999999;
+	color: #000000;
 }
 
 .contact-image-box {
