@@ -23,6 +23,7 @@ gem 'jquery-rails'
 # Gems used for user login
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'activerecord-postgresql-adapter'
 # gem 'omniauth-identity'
 
 # Use unicorn as the web server
