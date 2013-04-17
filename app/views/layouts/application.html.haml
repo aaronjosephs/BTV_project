@@ -20,13 +20,13 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+          %a#ham_btn.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
           %a.brand#BTV_logo{:href => "/"} B TV LOGO
-          .nav-collapse.collapse
-            %ul.nav#navbar
+          .nav-collapse.collapse#navbar
+            %ul.nav
               %li{:class => @home_active}
                 %a{:href => "/"} Home
               %li{:class => @about_active}

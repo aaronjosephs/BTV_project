@@ -1,5 +1,7 @@
 When /^the navigation bar is prepared to respond$/ do
-  page.execute_script(%Q{$(
+  page.execute_script(%Q{var vis_navbar;
+                          $("#navbar").on("hidden", function() {vis_navbar = 0});
+                          $("#navbar").on("shown", function() {vis_navbar = 1});})
 end
 
 When /^I click the logo$/ do
