@@ -1,0 +1,189 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    %title B-TV Contact
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+        %title
+        %meta{:content => "", :name => "description"}
+          %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+            %link{:href => "css/bootstrap.min.css", :rel => "stylesheet"}
+              :css
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                }
+                                  %link{:href => "css/bootstrap-responsive.min.css", :rel => "stylesheet"}
+                %link{:href => "css/main.css", :rel => "stylesheet"}
+                  %script{:src => "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"}
+  %body
+    /[if lt IE 7]
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"} B TV LOGO
+          .nav-collapse.collapse
+            %ul.nav
+              %li
+                %a{:href => "index.html"} Home
+              %li
+                %a{:href => "about.html"} About
+              %li.active
+                %a{:href => "contact.html"} Contact
+              %li
+                %a{:href => "shows.html"} Shows
+              %li
+                %a{:href => "schedule.html"} Schedule
+          / /.nav-collapse
+    .container
+      / YOUR CODE HERE
+      .row
+        .span3
+          %ul.nav.nav-tabs.nav-stacked
+            %li.nav-header Eboard
+            %li.active
+              %a{:href => "contact.html"} Executive Board
+            %li
+              %a{:href => "production-board.html"} Production Board
+            %li.nav-header
+              Contact information
+            %li
+              %a{:href => "contact-message.html"} Send us a message
+            %li
+              %a{:href => "mailto:xxx@TheNewBTV.com"} Email: xxx@TheNewBTV.com
+            %li
+              %a{:href => "#"} Address: xxx, xxx, UU
+            %li
+              %a{:href => "#"} Facebook: xxx.facbook.com
+          %div
+            %form.form-search
+              %input.input-medium.search-query{:type => "text"}
+                %button.btn{:type => "submit"} Search
+          %form.form-horizontal
+            %div
+              %div
+                %input#inputEmail{:placeholder => "Email", :type => "text"}
+              %br
+                %div
+                  %textarea{:name => "message", :placeholder => "Leave us a message.", :rows => "10"}
+                %br
+                  .controls
+                    %button.btn{:type => "submit"} Send
+        .span9
+          .contact-title-circle
+          .row-fluid.text-center
+            .page-header
+              %h2.contact-title Our Executive Board
+            %div
+              %p Description
+              %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            %br
+              %br
+                .row-fluid
+                  %ul.thumbnails
+                    %li.span4
+                      .thumbnail
+                        %a{:href => "http://about.me/AlexKleiner"}
+                          .contact-image-box
+                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                              %h4.contact-name
+                                %span
+                                  Alex Kleiner
+                                  %br President
+                              %a{:href => "mailto:President@TheNewBTV.com"}
+                                %h6.contact-info
+                                  %span President@TheNewBTV.com
+                    %li.span4.text-center
+                      .thumbnail
+                        %a{:href => "http://about.me/MichaelZagreda"}
+                          .contact-image-box
+                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                              %h4.contact-name
+                                %span
+                                  Michael Zagreda
+                                  %br Vice-President
+                              %a{:href => "mailto:VicePresident@TheNewBTV.com"}
+                                %h6.contact-info
+                                  %span VicePresident@TheNewBTV.com
+                    %li.span4.text-center
+                      .thumbnail
+                        %a{:href => "http://about.me/justin.ziske"}
+                          .contact-image-box
+                            %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                              %h4.contact-name
+                                %span
+                                  Justin Ziske
+                                  %br Theasurer
+                              %a{:href => "mailto:Treasurer@TheNewBTV.com"}
+                                %h6.contact-info
+                                  %span Treasurer@TheNewBTV.com
+                  %br
+                    %br
+                      %ul.thumbnails
+                        %li.span4.text-center
+                          .thumbnail
+                            %a{:href => "http://about.me/kaitcallahan"}
+                              .contact-image-box
+                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                  %h5.contact-name
+                                    %span
+                                      Kaitlyn Callahan
+                                      %br Administrative Manager
+                                  %a{:href => "mailto:Programming@TheNewBTV.com"}
+                                    %h6.contact-info
+                                      %span Programming@TheNewBTV.com
+                        %li.span4.text-center
+                          .thumbnail
+                            %a{:href => "#"}
+                              .contact-image-box
+                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                  %h4.contact-name
+                                    %span
+                                      Scott Sommer
+                                      %br Production Manager
+                                  %a{:href => "mailto:ProductionManager@TheNewBTV.com"}
+                                    %h6.contact-info
+                                      %span ProductionManager@TheNewBTV.com
+                        %li.span4.text-center
+                          .thumbnail
+                            %a{:href => "#"}
+                              .contact-image-box
+                                %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                  %h4.contact-name
+                                    %span
+                                      Ethan Race
+                                      %br Chief Engineer
+                                  %a{:href => "mailto:btv@TheNewBTV.com"}
+                                    %h6.contact-info
+                                      %span btv@TheNewBTV.com
+                      %br
+                        %br
+                          %ul.thumbnails
+                            %li.span4.text-center
+                              .thumbnail
+                                %a{:href => "http://about.me/joltjared"}
+                                  .contact-image-box
+                                    %img.img-rounded.contact-image{:alt => "", :src => "img/Contact.jpg"}
+                                      %h4.contact-name
+                                        %span
+                                          Jared Buinno
+                                          %br Chief of Staff
+                                      %a{:href => "mailto:btv@TheNewBTV.com"}
+                                        %h6.contact-info
+                                          %span btv@TheNewBTV.com
+        %footer
+          %p &copy; B-TV
+      / /container
+      %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+      :javascript
+        window.jQuery || document.write('<\/script>')

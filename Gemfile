@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+<<<<<<< HEAD
 gem 'rails', '3.2.3'
 
 # Bundle edge Rails instead:
@@ -7,6 +8,8 @@ gem 'rails', '3.2.3'
 group :development do
 	gem 'sqlite3', '1.3.5'
 	gem 'ruby-debug19', :require => 'ruby-debug'
+=======     
+>>>>>>> master
 end
 
 group :production do
@@ -15,12 +18,14 @@ end
 
 group :test do
   gem 'rspec-rails'
+<<<<<<< HEAD
   gem 'minitest'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'turn', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+>>>>>>> master
 end
 
 # Gems used only for assets and not required
@@ -42,4 +47,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+<<<<<<< HEAD
 gem 'haml'
+=======
+
+>>>>>>> master

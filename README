@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 B-TV 6 Project!
 
 /board delivers static page with Executive Board page /board?production=1 should deliver the Production board but this is unimplemented yet
 
 www/ contains all static HTML / CSS files 
 
+=======
+BTV -- Binghamton University's student-run television station.
+
+I'm proposing we keep some documentation here on assumptions made by cucumber about the views.
+Look these over if you're modifying the front end, and remember to run tests to make sure you're not breaking anything.
+CUCUMBER ASSUMPTIONS
+
+  On any page containing the navigation bar: 
+- the navigation bar should be contained within something having the id #navbar
+- the BTV logo should have the id #BTV_logo
+>>>>>>> master

@@ -1,0 +1,24 @@
+.container
+  .row-fluid
+    .span3
+      %ul.nav.nav-list
+        %li.nav-header
+          About BTV
+        %li{:class => @whoweare_active}
+          = link_to "Who we are", :controller => "home", :action => "about", :argu => "whoweare"
+        %li{:class => @whatwedo_active}
+          = link_to "What we do", :controller => "home", :action => "about", :argu => "whatwedo"
+    .span9
+      %h1
+        About BTV -
+        = @title
+        
+      - if @title == "WHO WE ARE"
+        %p
+        = @info
+      - else
+        %p
+          %ul
+            - @info.each do |i|
+              %li
+                = i

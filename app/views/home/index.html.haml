@@ -1,0 +1,40 @@
+.container
+  .hero-unit
+    %h1 BTV
+    %p Binghamton's number one station
+    %p
+      %a.btn.btn-primary.btn-large{:href => "about"} Learn more &raquo;
+  .row-fluid
+    .span4
+      %h2 Join BTV
+      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+      %p
+        %a.btn{:href => "join"} View details &raquo;
+    #FeaturedShow.span8
+    %script{:src => "js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"}
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
+    :javascript
+      window.jQuery || document.write('<\/script>')
+              
+              
+              
+              
+                // Load the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/player_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+                // Replace the 'FeaturedShow' element with an  and
+                // YouTube player after the API code downloads.
+                var player;
+                function onYouTubePlayerAPIReady() {
+                  player = new YT.Player('FeaturedShow', {
+                    height: '390',
+                    width: '640',
+                    videoId: 'IDBkg8JJRHk',
+                    enablejsapi: '1',
+                    controls: '2'
+                  });
+        }
+

@@ -1,9 +1,26 @@
 BTVProject::Application.routes.draw do
+<<<<<<< HEAD
+=======
+  get "home/index"
+
+  get "home/about"
+
+  resources :posts
+>>>>>>> master
 
   match "/board" => "board#index"
   resource :board 
 
 
+  match "about" => "home#about"
+  match "executive_board" => "home#executive_board"
+  match "contact" => "home#contact"
+  match "production_board" => "home#production_board"
+  match "shows" => "home#shows"
+  match "schedule" => "home#schedule"
+  match "join" => "home#join"
+  root :to => "home#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
