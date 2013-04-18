@@ -7,24 +7,29 @@
           =link_to "Executive Board", board_path
         %li{class:! @query.nil? && "active"}
           =link_to "Production Board", board_path(:production =>"yes")
+        %li 
+          =link_to "Constitution", "https://docs.google.com/file/d/0BwmYiU_-EWqycExkR2JhZUxGbDA/edit?usp=sharing"
         %li.nav-header
           Contact information
         %li
           %a{:href => "http://goo.gl/maps/1ntHz"} Address: BU Union Room B14
         %li
-          %a{:href => "http://www.facebook.com/btvsix"} Facebook
+          %a{:href => "https://www.facebook.com/groups/TheNewBTV/"}BTV General Body on Facebook
       %div
-
     .span9
       .row-fluid.text-center
         .page-header
         -if @query.nil?
-          %h2.contact-title Our Executive Board
+          %h2.contact-title Executive Board
         -else 
-          %h2.contact-title Our Production Board
+          %h2.contact-title Production Board
         %div
-          %p Description
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        -if @query.nil?
+          %p We Decide Stuff
+          %p What the Executive Board Does
+        -else 
+          %p We Produce Stuff
+          %p What the Production Board Does
         %br
           %br
             .row-fluid
