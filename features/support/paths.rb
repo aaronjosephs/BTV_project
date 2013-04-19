@@ -13,25 +13,13 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-
     when /^Production Board/
       "/board?production=yes"
-
-    when /^the home\s?page$/
-      '/'
-
-    when /^board page/
-      "/board"
 
     when /^AboutMe/
       "/"
 
-
-    when /^the home\s?page$/
-      '/'
-
-
-    # Add more mappings here.
+    # Add more mappings here. (Or farther down.)
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
@@ -39,28 +27,25 @@ module NavigationHelpers
 
     else
       begin
-        page_name =~ /^the (.*) page$/
+        page_name =~ /^(the )?(.*)\s?page$/
 
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
-
-
-        # But add mappings of the form: the ???? page  here.
+        # But add mappings of the form: "the ???? page" here.
+        # Also accepts just "???? page" or "the ????page".
         # The else case may work for expressions defined with
-        # convention over configuration.
-        case $1
+        # convention over configuration, but I wouldn't rely on it.
+        case $2
 
-        when 'Home'
+        when /Home/i
           '/'
 
-        when 'About'
+        when /About/i
           '/about'
 
-        when 'Board'
-          pending "pending board page integration"
+        when /Board/i
+          board_path
 
         else
-          path_components = $1.split(/\s+/)
+          path_components = $2.split(/\s+/)
           self.send(path_components.push('path').join('_').to_sym)
         end
 
