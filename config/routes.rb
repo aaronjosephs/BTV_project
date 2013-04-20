@@ -15,7 +15,7 @@ BTVProject::Application.routes.draw do
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
-
+  resources :identities
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

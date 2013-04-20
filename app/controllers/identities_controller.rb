@@ -1,0 +1,6 @@
+class IdentitiesController < ApplicationController
+  def new
+    @identity = session[:identity] || Identity.new
+  end
+
+end

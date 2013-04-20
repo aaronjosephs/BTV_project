@@ -76,6 +76,9 @@ GEM
       rack
     omniauth-facebook (1.4.1)
       omniauth-oauth2 (~> 1.1.0)
+    omniauth-identity (1.1.0)
+      bcrypt-ruby (~> 3.0)
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -136,10 +139,12 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-postgresql-adapter
+  bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.1.0)
   jquery-rails
   omniauth
   omniauth-facebook
+  omniauth-identity
   pg
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
