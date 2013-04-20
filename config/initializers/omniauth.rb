@@ -4,7 +4,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :identity, :on_failed_registration => ->(env) do
     env['rack.session'][:identity] = env['omniauth.identity']
     resp = Rack::Response.new("", 302)
-    resp.redirect('/register')
+    resp.redirect('/identities/new')
     resp.finish
   end
 end
