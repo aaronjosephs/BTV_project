@@ -8,4 +8,3 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     resp.finish
   end
 end
-end
