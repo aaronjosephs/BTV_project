@@ -30,13 +30,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
-    capybara (2.0.3)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
-      selenium-webdriver (~> 2.0)
-      xpath (~> 1.0.0)
+      xpath (~> 2.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
     coffee-rails (3.2.2)
@@ -92,7 +91,7 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.22)
+    mime-types (1.23)
     multi_json (1.7.2)
     multipart-post (1.2.0)
     nokogiri (1.5.9)
@@ -174,14 +173,14 @@ GEM
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     websocket (1.0.7)
-    xpath (1.0.0)
+    xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara (= 2.0.3)
+  capybara
   coffee-rails (= 3.2.2)
   cucumber-rails
   cucumber-rails-training-wheels
@@ -195,5 +194,6 @@ DEPENDENCIES
   rails (= 3.2.3)
   rspec-rails
   sass-rails (= 3.2.4)
+  selenium-webdriver
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)

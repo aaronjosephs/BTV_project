@@ -14,6 +14,7 @@ Scenario Outline: loading pages from the address bar
     | home     |
     | about    |
     | board    |
+    | shows    |
 
 Scenario Outline: navigation via the navigation bar
   When I am on the <from> page
@@ -25,8 +26,10 @@ Scenario Outline: navigation via the navigation bar
     | home     | home     | Home    |
     | home     | about    | About   |
     | home     | board    | Board   |
+    | home     | shows    | Shows   |
     | about    | home     | Home    |
     | board    | home     | Home    |
+    | shows    | home     | Home    |
 
 Scenario Outline: navigation via the BTV logo
   When I am on the <from> page
