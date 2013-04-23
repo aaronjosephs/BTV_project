@@ -1,1 +1,17 @@
-%h1 Users
+%div.span10.offset1
+  %h1.text-center
+    Users
+  %table.table
+    %thead
+      %tr
+        %th Name
+        %th Email
+        %th Role
+    %tbody
+      - @users.each do |user|
+        %tr
+          %td= user.name
+          %td= user.email
+
+  <br>
+  = link_to "Back to Admin", :action => "index"
