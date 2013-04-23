@@ -21,6 +21,8 @@ BTVProject::Application.routes.draw do
   match "Comics_Anonymous" => "home#Comics_Anonymous"
   root :to => "home#index"
   match "admin" => "admin/content#index"
+  match "admin/content/show_users" => "admin/content#show_users"
+  match "admin/content/show_requests" => "admin/content#show_requests"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

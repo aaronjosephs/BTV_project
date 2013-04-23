@@ -96,10 +96,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-<<<<<<< HEAD
     minitest (4.7.3)
-=======
->>>>>>> 1661190ad400a955b2a24b9fe49673c92f988fcf
     multi_json (1.7.2)
     multipart-post (1.2.0)
     nokogiri (1.5.9)
