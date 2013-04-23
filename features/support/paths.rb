@@ -59,6 +59,9 @@ module NavigationHelpers
         when /Board/i
           board_path
 
+        when /Shows/i
+          '/shows'
+
         else
           path_components = $2.split(/\s+/)
           self.send(path_components.push('path').join('_').to_sym)

@@ -1,9 +1,7 @@
 BTVProject::Application.routes.draw do
   match "/board" => "board#index"
   resource :board 
-
   resources :videos
-
   resources :posts
 
 
@@ -22,7 +20,7 @@ BTVProject::Application.routes.draw do
   match "What_4" => "home#What_4"
   match "Comics_Anonymous" => "home#Comics_Anonymous"
   root :to => "home#index"
-
+  match "admin" => "admin/content#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
