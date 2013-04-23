@@ -15,8 +15,9 @@ group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels' #Virtually everyone still needs these.
-  gem 'capybara', '2.0.3'
+  gem 'capybara'
   gem 'database_cleaner'
+  gem 'selenium-webdriver' #Javascript testing.
 end
 
 group :development, :test do

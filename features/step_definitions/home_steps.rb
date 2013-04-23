@@ -1,16 +1,19 @@
 When /^the navigation bar is prepared to respond$/ do
-  page.execute_script(%Q{var vis_navbar;
-                          $("#navbar").on("hidden", function() {vis_navbar = 0});
-                          $("#navbar").on("shown", function() {vis_navbar = 1});})
+  page.execute_script(%Q{
+    var navbar = $("navbar");
+    navbar.visibility = 0;
+    navbar.on("hidden", function() {navbar.visibility = 1});
+    navbar.on("shown", function() {navbar.visibility = 0});
+  })
 end
 
 When /^I click the logo$/ do
   click_on("BTV_logo")
 end
 
-When /^I should (not |)see the hamburger button$/ do |should_not|
-  visible = page.execute_script(%Q{document.getElementById("ham_btn").visible();})
-  if not ((should_not != 'not') == (visible))
+When /^I should (not |)see the navigation bar$/ do |should_not|
+  visible = (page.execute_script(%Q{$("navbar").visibility;}) == 1)
+  if not ((should_not == 'not') == (visible))
     throw "Hamburger button has wrong visibility"
   end
 end
