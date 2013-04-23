@@ -12,6 +12,10 @@ class Admin::ContentController < ApplicationController
     @users = User.find(:all)
   end
 
+  def edit_user
+    @user = User.find_by_id(params[:id])
+  end
+
   def show_requests
   end
 end
