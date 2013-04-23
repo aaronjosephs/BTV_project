@@ -28,7 +28,6 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
-
     when /^the about page$/
       '/about'
     # Add more mappings here.
@@ -40,6 +39,10 @@ module NavigationHelpers
     else
       begin
         page_name =~ /^(the )?(.*)\s?page$/
+
+        path_components = $1.split(/\s+/)
+        self.send(path_components.push('path').join('_').to_sym)
+
 
         # But add mappings of the form: "the ???? page" here.
         # Also accepts just "???? page" or "the ????page".

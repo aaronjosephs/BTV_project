@@ -16,10 +16,13 @@ module HtmlSelectorsHelpers
     when "the page"
       "html > body"
 
+<<<<<<< HEAD
     when "the navigation bar"
       "#navbar"
 
 
+=======
+>>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
