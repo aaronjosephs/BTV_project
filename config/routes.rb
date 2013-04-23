@@ -1,12 +1,11 @@
 BTVProject::Application.routes.draw do
-<<<<<<< HEAD
   match "/board" => "board#index"
   resource :board 
-=======
+
   resources :videos
 
   resources :posts
->>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
+
 
   match "about" => "home#about"
   match "contact" => "home#contact"
