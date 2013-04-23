@@ -1,3 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessible :description, :name
+  has_many :User_roles, :dependent => :destroy
+  has_many :Videos
+  
+  validates :name, :email, :presence => true
+  attr_accessible :email, :name
 end
