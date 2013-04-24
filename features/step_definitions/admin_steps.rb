@@ -7,6 +7,7 @@ Given /^I am logged in as an administrator$/ do
 end
 
 Given /^there is a user named "(.*)"$/ do |user_name|
+  User.create(:name => "($1)")
   #pending "Pending user login system"
 end
 
