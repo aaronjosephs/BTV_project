@@ -24,6 +24,7 @@ BTVProject::Application.routes.draw do
   match "admin/content/show_users" => "admin/content#show_users"
   match "admin/content/show_requests" => "admin/content#show_requests"
   match "admin/content/edit_user/:id" => "admin/content#edit_user", :as => :edit_user
+  match "admin/content/create_user" => "admin/content#create_user", :as => :create_user
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
