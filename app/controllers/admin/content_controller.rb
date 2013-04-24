@@ -39,7 +39,10 @@ class Admin::ContentController < ApplicationController
     
   end
 
-  def show_requests
+  def show_users_videos
+  end
+
+  def show_pending_videos
   end
 
   protected

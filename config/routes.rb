@@ -22,9 +22,10 @@ BTVProject::Application.routes.draw do
   root :to => "home#index"
   match "admin" => "admin/content#index"
   match "admin/content/show_users" => "admin/content#show_users"
-  match "admin/content/show_requests" => "admin/content#show_requests"
+  match "admin/content/show_users_videos" => "admin/content#show_users_videos"
   match "admin/content/edit_user/:id" => "admin/content#edit_user", :as => :edit_user
   match "admin/content/create_user" => "admin/content#create_user", :as => :create_user
+  match "admin/content/show_pending_videos" => "admin/content#show_pending_videos", :as => :show_pending_videos
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

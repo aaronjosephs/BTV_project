@@ -16,7 +16,7 @@ module NavigationHelpers
     when /^Production Board/
       "/board?production=yes"
 
-    when /the homepage/
+    when /the home page/
       '/'
 
     when /board page/
@@ -29,13 +29,13 @@ module NavigationHelpers
       '/admin'
 
     when /admin user page/
-      '/admin/users'
+      '/admin/content/show_users'
 
     when /admin unapproved videos page/
-      '/admin/pending/'
+      '/admin/content/show_pending_videos'
 
     when /admin approved videos page/
-      '/admin/videos/'
+      '/admin/content/show_users_videos'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
