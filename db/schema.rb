@@ -11,23 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130318234847) do
+ActiveRecord::Schema.define(:version => 20130423011941) do
 
-  create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "body"
-    t.string   "video"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "user_roles", :force => true do |t|
+    t.integer  "User_id"
+    t.string   "role"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
+
+  add_index "user_roles", ["User_id"], :name => "index_user_roles_on_User_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "videos", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "url"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
