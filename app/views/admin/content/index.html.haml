@@ -1,8 +1,7 @@
-%h3.text-center
-  ADMIN PAGE
-
-
-%div.span3.offset1
-  = link_to "Show Users", :controller => "admin/content", :action => "show_users"
-  <br>
-  = link_to "Show Requests", :controller => "admin/content", :action => "show_requests"
+.container
+  %h3.text-center
+    ADMIN PAGE
+  .span3.offset1
+    %ul.nav.nav-tabs.nav-stacked
+      %li= link_to "Show Users", :controller => "admin/content", :action => "show_users"
+      %li= link_to "Show Requests", :controller => "admin/content", :action => "show_requests"

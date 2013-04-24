@@ -1,10 +1,14 @@
-%h3
-  Name: 
-  = @user.name
-  <br>
-  Email:
-  = @user.email
+.container
 
-= link_to "Back to users list", :action => "show_users"
+  = form_for @user, :url => edit_user_path(@user) do |f|
+    Name:
+    = f.text_field :name
+    <br>
+    Email:
+    = f.text_field :email
+    <br>
+    = f.submit
+  = flash[:notice]
+  = link_to "Back to users list", :action => "show_users"
 
   
