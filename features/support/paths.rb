@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^Production Board/
       "/board?production=yes"
 
+    when /the homepage/
+      '/'
+
     when /board page/
       '/board'
 
@@ -25,6 +28,15 @@ module NavigationHelpers
     when /admin dashboard/
       '/admin'
 
+    when /admin user page/
+      '/admin/users'
+
+    when /admin unapproved videos page/
+      '/admin/pending/'
+
+    when /admin approved videos page/
+      '/admin/videos/'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -33,7 +45,7 @@ module NavigationHelpers
 
     else
       begin
-        page_name =~ /^(the )?(.*)\s?page$/
+        page_name =~ /^(the )?(.*)page$/
 
 ###########################################################
         #We seem to be having an editting war here.
@@ -64,12 +76,6 @@ module NavigationHelpers
 
         when /^admin$/
           '/admin'
-
-        when /^admin users$/
-          '/admin/users'
-
-        when /^admin unapproved videos$/
-          '/admin/pending'
 
         else
           path_components = $2.split(/\s+/)
