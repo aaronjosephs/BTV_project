@@ -1,17 +1,18 @@
-%div.span10.offset1
-  %h1.text-center
-    Users
-  %table.table
-    %thead
-      %tr
-        %th Name
-        %th Email
-        %th Role
-    %tbody
-      - @users.each do |user|
+.container
+  .span10.offset1
+    %h1.text-center
+      Users
+    %table.table.table-hover
+      %thead
         %tr
-          %td= link_to "#{user.name}", edit_user_path(user)
-          %td= user.email
+          %th Name
+          %th Email
+          %th Role
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= link_to "#{user.name}", edit_user_path(user)
+            %td= mail_to "#{user.email}"
 
-  <br>
-  = link_to "Back to Admin", :action => "index"
+    <br>
+    = link_to "Back to Admin", :action => "index"

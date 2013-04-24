@@ -14,6 +14,12 @@ class Admin::ContentController < ApplicationController
 
   def edit_user
     @user = User.find_by_id(params[:id])
+    flash[:notice] = params.inspect()
+    if params[:user]
+      if @user.update_attributes(params[:user])
+        redirect_to :controller => "admin/content", :action => "show_users"
+      end
+    end
   end
 
   def show_requests
