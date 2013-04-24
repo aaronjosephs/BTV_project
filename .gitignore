@@ -56,5 +56,11 @@ db/*.sqlite3
 log/*.log
 tmp/
 .sass-cache/
+<<<<<<< HEAD
 .DS_Store
 
+=======
+
+#Temporaries
+*~
+>>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
