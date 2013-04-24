@@ -1,5 +1,9 @@
 module Admin; end
 class Admin::ContentController < ApplicationController
+
+  #An Admin must be logged in for this controller to do anything.
+  before_filter :admin_logged_in
+
   def index
     @admin = true
     if @admin
@@ -24,4 +28,17 @@ class Admin::ContentController < ApplicationController
 
   def show_requests
   end
+
+  protected
+  def admin_logged_in
+    # Assume an admin is logged in for now, pending
+    # completion of the user system.
+    #
+    # This method should check that an admin is logged in
+    # (probably by checking the session hash for an id and
+    # querying the user database) and redirect to a login page
+    # or the home page if noone's logged in or a non-admin
+    # is logged in.
+  end
+
 end
