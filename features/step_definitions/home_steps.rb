@@ -14,6 +14,13 @@ end
 When /^I should (not |)see the navigation bar$/ do |should_not|
   visible = (page.execute_script(%Q{$("navbar").visibility;}) == 1)
   if not ((should_not == 'not') == (visible))
+    throw "Navigation bar has wrong visibility"
+  end
+end
+
+When /^I should (not |)see the hamburger button$/ do |should_not|
+  visible = (page.execute_script(%Q{$("ham_btn").width();}) > 0)
+  if not ((should_not == 'not') == (visible))
     throw "Hamburger button has wrong visibility"
   end
 end

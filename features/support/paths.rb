@@ -16,7 +16,7 @@ module NavigationHelpers
     when /^Production Board/
       "/board?production=yes"
 
-    when /^the home\s?page$/
+    when /the homepage/
       '/'
 
     when /board page/
@@ -25,11 +25,18 @@ module NavigationHelpers
     when /^AboutMe/
       "/"
 
+    when /admin dashboard/
+      '/admin'
 
-    when /^the home\s?page$/
-      '/'
-    when /^the about page$/
-      '/about'
+    when /admin user page/
+      '/admin/users'
+
+    when /admin unapproved videos page/
+      '/admin/pending/'
+
+    when /admin approved videos page/
+      '/admin/videos/'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -38,29 +45,37 @@ module NavigationHelpers
 
     else
       begin
-        page_name =~ /^(the )?(.*)\s?page$/
+        page_name =~ /^(the )?(.*)page$/
 
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
+###########################################################
+        #We seem to be having an editting war here.
+        #why does this need to be here and not below
+        #where I've placed it?
+        #path_components = $1.split(/\s+/)
+        #self.send(path_components.push('path').join('_').to_sym)
+##########################################################
 
 
         # But add mappings of the form: "the ???? page" here.
         # Also accepts just "???? page" or "the ????page".
         # The else case may work for expressions defined with
         # convention over configuration, but I wouldn't rely on it.
-        case $2
+        case $2.downcase
 
-        when /Home/i
+        when /^home$/
           '/'
 
-        when /About/i
+        when /^about$/
           '/about'
 
-        when /Board/i
+        when /^board$/
           board_path
 
-        when /Shows/i
+        when /^shows$/
           '/shows'
+
+        when /^admin$/
+          '/admin'
 
         else
           path_components = $2.split(/\s+/)
