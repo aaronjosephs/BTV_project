@@ -40,8 +40,11 @@ module NavigationHelpers
       begin
         page_name =~ /^(the )?(.*)\s?page$/
 
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
+        #We seem to be having an editting war here.
+        #why does this need to be here and not below
+        #where I've placed it?
+        #path_components = $1.split(/\s+/)
+        #self.send(path_components.push('path').join('_').to_sym)
 
 
         # But add mappings of the form: "the ???? page" here.
@@ -61,6 +64,15 @@ module NavigationHelpers
 
         when /Shows/i
           '/shows'
+
+        when /Admin/i
+          '/admin'
+
+        when /Admin Users/i
+          '/admin/users'
+
+        when /Admin Unapproved Videos/i
+          '/admin/pending'
 
         else
           path_components = $2.split(/\s+/)
