@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+
+
+
+# Used to Seed DB for the Baord Page
+user1 = User.create!(:name => "Cezar Cocu", :email =>"a@b.com")
+BoardInfo.create!(:user_id => user1.id, :title=> "President", :board => "executive", :photo => "/assets/Contact.jpg", :description => "A nice Description about Cezar")
+
+user1 = User.create!(:name => "Ben Ramos", :email =>"b@d.com")
+BoardInfo.create!(:user_id => user1.id, :title=> "Consigliere", :board => "executive", :photo => "/assets/Contact.jpg", :description => "Ben Loves Fashion")
+
+
+user1 = User.create!(:name => "Chris Graf", :email =>"d@e.com")
+BoardInfo.create!(:user_id => user1.id, :title=> "Master Boss", :board => "production", :photo => "/assets/Contact.jpg", :description => "Chris likes stuff")
