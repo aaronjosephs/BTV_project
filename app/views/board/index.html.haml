@@ -42,7 +42,7 @@
                           %h4.contact-name
                             %span 
                               ="#{member['name']}"
-                              -"#{member['title']}"
+                              %br=member['title']
                           %a{:href => "mailto:#{member['email']}"}
                             %h6.contact-info
                               %span="#{member['email']}"
