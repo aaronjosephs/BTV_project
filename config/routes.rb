@@ -1,6 +1,5 @@
 BTVProject::Application.routes.draw do
   match "/board" => "board#index"
-  resource :board 
 
   resources :videos
 

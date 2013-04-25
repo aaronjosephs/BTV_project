@@ -6,7 +6,8 @@ gem 'haml'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 group :development do
   gem 'sqlite3', '1.3.5'
-  gem 'debugger'      
+  gem 'debugger'   
+  gem 'annotate'   
 end
 
 group :production do
