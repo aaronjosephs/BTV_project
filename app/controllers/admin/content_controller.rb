@@ -42,6 +42,10 @@ class Admin::ContentController < ApplicationController
   def show_users_videos
   end
 
+  def show_video
+    #@video = Video.find(params[:id])
+  end
+
   def show_pending_videos
   end
 
