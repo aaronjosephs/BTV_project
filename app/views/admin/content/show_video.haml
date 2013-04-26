@@ -1,7 +1,7 @@
 .container
   .span10.offset1
     %h1.text-center
-      Unapproved User Videos
+      Unapproved Video Information
     %table.table.table-hover
       %thead
         %tr
@@ -10,8 +10,10 @@
           %th URL
       %tbody
         %tr
-          %td= link_to "Unapproved Video 1", "/admin/content/show_video/1"
+          %td Unapproved Video
           %td This is the second video.
           %td= link_to "Here", "http://www.google.com"
+
+
 
   = link_to "Back to Admin", :action => "index"
