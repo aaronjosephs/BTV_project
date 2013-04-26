@@ -40,7 +40,7 @@ Scenario: user videos page
 Scenario: specific video page
   Given there is a video titled "Unapproved Video"
   And I am on the admin unapproved videos page
-  Then I should see "Unapproved User Video"
+  Then I should see "Unapproved Video"
   When I follow "Unapproved Video"
   Then I should see "Unapproved Video Information"
 
