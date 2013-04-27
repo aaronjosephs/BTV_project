@@ -21,3 +21,7 @@ BoardInfo.create!(:user_id => user1.id, :title=> "Consigliere", :board => "execu
 
 user1 = User.create!(:name => "Chris Graf", :email =>"d@e.com")
 BoardInfo.create!(:user_id => user1.id, :title=> "Master Boss", :board => "production", :photo => "/assets/Contact.jpg", :description => "Chris likes stuff")
+
+
+user1 = User.create!(:name => "Aaron", :email =>"d@e.com")
+BoardInfo.create!(:user_id => user1.id, :title=> "chef", :board => "executive", :photo => "/assets/Contact.jpg", :description => "Aron likes stuff")
