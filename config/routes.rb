@@ -19,15 +19,19 @@ BTVProject::Application.routes.draw do
   match "Gametime!" => "home#Gametime!"
   match "What_4" => "home#What_4"
   match "Comics_Anonymous" => "home#Comics_Anonymous"
+
+  namespace :admin do
+    match "/" => "content#index"
+    match "/content/show_users" => "content#show_users"
+    match "/content/show_users_videos" => "content#show_users_videos"
+    match "/content/edit_user/:id" => "content#edit_user", :as => :edit_user
+    match "/content/create_user" => "content#create_user", :as => :create_user
+    match "/content/show_pending_videos" => "content#show_pending_videos", :as => :show_pending_videos
+    match "/content/show_video/:id" => "content#show_video"
+  end
+
   root :to => "home#index"
-  match "admin" => "admin/content#index"
-  match "admin/content/show_users" => "admin/content#show_users"
-  match "admin/content/show_users_videos" => "admin/content#show_users_videos"
-  match "admin/content/edit_user/:id" => "admin/content#edit_user", :as => :edit_user
-  match "admin/content/create_user" => "admin/content#create_user", :as => :create_user
-  match "admin/content/show_pending_videos" => "admin/content#show_pending_videos", :as => :show_pending_videos
-  match "admin/content/show_video/:id" => "admin/content#show_video"
-  # The priority is based upon order of creation:
+ # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

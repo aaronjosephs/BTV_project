@@ -5,7 +5,7 @@
 
     -# This should probably be a form instead of a form tag,
     -# but I'm avoiding accessing the models for this iteration.
-    = form_tag edit_user_path do
+    = form_tag admin_edit_user_path do
       = label_tag "name", "Name:"
       = text_field_tag "name", "Ima User", :disabled => true
       = label_tag "email", "Email:"
