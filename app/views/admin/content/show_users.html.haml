@@ -9,10 +9,19 @@
           %th Email
           %th Role
       %tbody
-        - @users.each do |user|
-          %tr
-            %td= link_to "#{user.name}", edit_user_path(user)
-            %td= mail_to "#{user.email}"
+        -# - @users.each do |user|
+        %tr
+          %td= link_to "Ima User", edit_user_path(0)
+          %td= mail_to "ima@binghamton.edu"
+          %td User
+        %tr
+          %td= link_to "Adam In", edit_user_path(1)
+          %td= mail_to "Position@TheNewBTV.com"
+          %td Eboard
+        %tr
+          %td= link_to "Alex Kleiner", edit_user_path(2)
+          %td= mail_to "President@TheNewBTV.com"
+          %td President
 
     <br>
     = link_to "Create user", :action => "create_user"
