@@ -1,9 +1,9 @@
 BTVProject::Application.routes.draw do
-
+<<<<<<< HEAD
   match "/board" => "board#index"
 
   resources :videos
-
+=======
   get "sessions/new"
 
   get "sessions/create"
@@ -11,12 +11,12 @@ BTVProject::Application.routes.draw do
   get "sessions/failure"
 
   resources :authentications
-
+>>>>>>> user_login
 
   resources :posts
 
 
-
+<<<<<<< HEAD
   match "about" => "home#about"
   match "contact" => "home#contact"
   match "shows" => "home#shows"
@@ -33,13 +33,13 @@ BTVProject::Application.routes.draw do
   match "Comics_Anonymous" => "home#Comics_Anonymous"
   root :to => "home#index"
 
-
+=======
   # Redirects authentication callback for omniAuth
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   resources :identities
-
+>>>>>>> user_login
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

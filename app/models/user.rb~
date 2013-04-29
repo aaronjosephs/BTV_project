@@ -10,9 +10,15 @@
 #
 
 class User < ActiveRecord::Base
+<<<<<<< HEAD
   has_many :User_roles, :dependent => :destroy
   has_many :Videos
   has_many :boardinfo, :dependent => :destroy
+  
   validates :name, :email, :presence => true
-  has_many :authentications
+
+=======
+	has_many :authentications
+	validates :name, :email, :presence => true
+>>>>>>> user_login
 end
