@@ -20,7 +20,7 @@ BTVProject::Application.routes.draw do
   match "Comics_Anonymous" => "home#Comics_Anonymous"
 
   namespace :admin do
-    root :to => "content#index"
+    root :to => "dashboard#index"
     resources :users, :except => ['new', 'create', 'edit']
     resources :videos, :except => ['new', 'create', 'edit'] do
       member do

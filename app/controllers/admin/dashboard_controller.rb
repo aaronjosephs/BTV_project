@@ -5,11 +5,6 @@ class Admin::ContentController < ApplicationController
   include AdminModule
 
   def index
-    @admin = true
-    if @admin
-    else
-      redirect_to :controller => "/home", :action => "index"
-    end
   end
 
 end
