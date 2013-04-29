@@ -4,7 +4,6 @@ BTVProject::Application.routes.draw do
   resources :videos
   resources :posts
 
-
   match "about" => "home#about"
   match "contact" => "home#contact"
   match "shows" => "home#shows"
@@ -21,13 +20,10 @@ BTVProject::Application.routes.draw do
   match "Comics_Anonymous" => "home#Comics_Anonymous"
 
   namespace :admin do
-    match "/" => "content#index"
-    match "/content/show_users" => "content#show_users"
-    match "/content/show_users_videos" => "content#show_users_videos"
-    match "/content/edit_user/:id" => "content#edit_user", :as => :edit_user
-    match "/content/create_user" => "content#create_user", :as => :create_user
-    match "/content/show_pending_videos" => "content#show_pending_videos", :as => :show_pending_videos
-    match "/content/show_video/:id" => "content#show_video"
+    root :to => "content#index"
+    resources :users, :except => ['new', 'create', 'edit']
+    resources :videos, :except => ['new', 'create', 'edit']
+    match "/pending" => "videos#pending", :as => "pending_videos"
   end
 
   root :to => "home#index"

@@ -5,7 +5,7 @@
 
     -# This should probably be a form instead of a form tag,
     -# but I'm avoiding accessing the models for this iteration.
-    = form_tag admin_edit_user_path do
+    = form_tag admin_user_path, :method => :put do
       = label_tag "name", "Name:"
       = text_field_tag "name", "Ima User", :disabled => true
       = label_tag "email", "Email:"
@@ -13,4 +13,5 @@
       = label_tag "role", "Role:"
       = select_tag "role", "<option selected>User</option><option>President</option><option>Whatever</option>".html_safe
       = submit_tag "Submit Changes", :confirm => "Change this user's information?"
-    = link_to "Back to users list", :action => "show_users"
+    %br
+    = link_to "Back to users list", admin_users_path

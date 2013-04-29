@@ -26,16 +26,16 @@ module NavigationHelpers
       "/"
 
     when /admin dashboard/
-      '/admin'
+      admin_root_path
 
-    when /admin user page/
-      '/admin/content/show_users'
+    when /admin users? page/
+      admin_users_path
 
     when /admin unapproved videos page/
-      '/admin/content/show_pending_videos'
+      admin_pending_videos_path
 
     when /admin approved videos page/
-      '/admin/content/show_users_videos'
+      admin_videos_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
