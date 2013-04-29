@@ -7,23 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-
-
-
-
 # Used to Seed DB for the Baord Page
-user1 = User.create!(:name => "Cezar Cocu", :email =>"a@b.com")
-BoardInfo.create!(:user_id => user1.id, :title=> "President", :board => "executive", :photo => "/assets/Contact.jpg", :description => "A nice Description about Cezar")
-
-user1 = User.create!(:name => "Ben Ramos", :email =>"b@d.com")
-BoardInfo.create!(:user_id => user1.id, :title=> "Consigliere", :board => "executive", :photo => "/assets/Contact.jpg", :description => "Ben Loves Fashion")
-
-
-user1 = User.create!(:name => "Chris Graf", :email =>"d@e.com")
-BoardInfo.create!(:user_id => user1.id, :title=> "Master Boss", :board => "production", :photo => "/assets/Contact.jpg", :description => "Chris likes stuff")
-
-
-<<<<<<< HEAD
 #EBoard
 user1 = User.create!(:name => "Mike Zegreda", :email => "president@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title=> "President", :board => "executive", :photo => "/assets/Contact.jpg", :description => "The Newly Elected President of BTV!") 
@@ -50,7 +34,3 @@ BoardInfo.create!(:user_id => user1.id, :title => "Chief of Staff", :board => "e
 
 
 
-=======
-user1 = User.create!(:name => "Aaron", :email =>"d@e.com")
-BoardInfo.create!(:user_id => user1.id, :title=> "chef", :board => "executive", :photo => "/assets/Contact.jpg", :description => "Aron likes stuff")
->>>>>>> 1a7d4984bbd6f5a35c55f96ad0fd0f48f9f7ecad
