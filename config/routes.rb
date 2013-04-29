@@ -22,7 +22,11 @@ BTVProject::Application.routes.draw do
   namespace :admin do
     root :to => "content#index"
     resources :users, :except => ['new', 'create', 'edit']
-    resources :videos, :except => ['new', 'create', 'edit']
+    resources :videos, :except => ['new', 'create', 'edit'] do
+      member do
+        put "approve"
+      end
+    end
     match "/pending" => "videos#pending", :as => "pending_videos"
   end
 
