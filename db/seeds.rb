@@ -31,28 +31,28 @@ user1 = User.create!(:name => "Michael Hickey", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Chief of Staff", :board => "executive", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Chief of Staff of BTV!")
 
 #Production Board
-user1 = User.create!(:name => "Not Sure Yet", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Not Sure Yet", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Editing Director", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Editing Director of BTV!")
 
-user1 = User.create!(:name => "Melissa Edelblum", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Melissa Edelblum", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "News Manager", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected News Director of BTV!")
 
-user1 = User.create!(:name => "Not Sure Yet", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Not Sure Yet", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Programming Director", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Programming Director of BTV!")
 
-user1 = User.create!(:name => "Maura Linehan", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Maura Linehan", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Studio Director", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Studio Director of BTV!")
 
-user1 = User.create!(:name => "Wade Wicks", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Wade Wicks", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Marketing Manager", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Marketing Manager of BTV!")
 
-user1 = User.create!(:name => "Dan Berlin", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Dan Berlin", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Head of Writing", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Head of Writing of BTV!")
 
-user1 = User.create!(:name => "JAmes Ferrick", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "JAmes Ferrick", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Downtime Director", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Downtime Director of BTV!")
 
-user1 = User.create!(:name => "Phil Kral", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Phil Kral", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Mobile Unit", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Mobile Unit of BTV!")
 
 user1 = User.create!(:name => "Danielle Micceri", email => "btv@TheNewBTV.com")
