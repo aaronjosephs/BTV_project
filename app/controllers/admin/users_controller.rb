@@ -13,7 +13,7 @@ class Admin::UsersController < ApplicationController
   def update
     # Depends on whether the view implementation is used.
 #    @user = User.find(params[:id])
-    redirect_to admin_user_path(0)
+    redirect_to admin_user_path(params[:id])
   end
 
   def destroy
