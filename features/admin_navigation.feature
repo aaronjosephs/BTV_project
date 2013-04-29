@@ -10,7 +10,7 @@ Background:
 
 Scenario: the dashboard
   Given I am on the admin dashboard
-  Then I should see "Dashboard"
+  Then I should see "Admin Dashboard"
   And I should see "Users"
   And I should see "Pending Videos"
   And I should see "User Videos"
