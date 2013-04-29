@@ -12,3 +12,15 @@ Feature: Working Website
     And I should see "What we do"
     When I follow "What we do"
     Then I should see "Promote a strong sense of Binghamton University pride and spirit."
+
+  Scenario: User will be able to see the board page
+    When I follow "Board"
+    Then I should see "Our Executive Board"
+    And I should see "Alex Kleiner"
+    When I follow "Alex Kleiner"
+    Then I should see "about Alex Kleiner"
+
+  Scenario: User will be able to send a email to the eboard
+    When I follow "Board"
+    And I follow "President@TheNewBTV.com"
+    
