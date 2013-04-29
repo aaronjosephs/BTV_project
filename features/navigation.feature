@@ -11,30 +11,33 @@ Scenario Outline: loading pages from the address bar
 
   Examples: pages
     | page     |
-    | Home     |
-    | About    |
-    | Board    |
+    | home     |
+    | about    |
+    | board    |
+    | shows    |
 
 Scenario Outline: navigation via the navigation bar
   When I am on the <from> page
-  And I follow "<to>" within the navigation bar
+  And I follow "<link>" within the navigation bar
   Then I am on the <to> page
 
   Examples: combinations of pages
-    | from     | to       |
-    | Home     | Home     |
-    | Home     | About    |
-    | Home     | Board    |
-    | About    | Home     |
-    | Board    | Home     |
+    | from     | to       | link    |
+    | home     | home     | Home    |
+    | home     | about    | About   |
+    | home     | board    | Board   |
+    | home     | shows    | Shows   |
+    | about    | home     | Home    |
+    | board    | home     | Home    |
+    | shows    | home     | Home    |
 
 Scenario Outline: navigation via the BTV logo
   When I am on the <from> page
   And I click the logo
-  Then I am on the Home page
+  Then I am on the home page
 
   Examples: pages
     | from     |
-    | Home     |
-    | About    |
-    | Board    |
+    | home     |
+    | about    |
+    | board    |
