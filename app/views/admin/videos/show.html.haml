@@ -1,0 +1,22 @@
+.container
+  .span10.offset1
+    %h1.text-center
+      = "Unapproved Video Information"
+    = form_tag admin_video_path(params[:id]), :method => :put do
+      = label_tag "title", "Title"
+      = text_field_tag "title", "Unapproved Video"
+      = label_tag "description", "Description"
+      = text_area_tag "description", "This is the second video"
+      = label_tag "url", "URL"
+      = url_field_tag "url", "http://www.google.com"
+      = label_tag "pending", "Approved?"
+      = text_field_tag "pending", "No", :disabled => true
+      %br
+      = submit_tag "Submit Changes", :confirm => "Change this video's information?"
+
+  %br
+  = button_to "Approve", approve_admin_video_path(params[:id]), :method => :put,
+    :confirm => "An email will be sent to the author.\nApprove this video?"
+
+  %br
+  = link_to "Back to Dashboard", admin_root_path

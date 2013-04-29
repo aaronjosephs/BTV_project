@@ -33,13 +33,7 @@ World(WithinHelpers)
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
-<<<<<<< HEAD
-
   with_scope(parent) { steps %Q{When #{step}} }
-
-=======
-  with_scope(parent) { When step }
->>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
 end
 
 # Multi-line step scoper
@@ -235,13 +229,11 @@ end
  
 Then /^(?:|I )should be on (.+)$/ do |page_name|
   current_path = URI.parse(current_url).path
-<<<<<<< HEAD
   current_query = URI.parse(current_url).query
   if current_path.respond_to? :should
-    if ( !current_query.nil? ) then current_path += "?" + current_query end
-=======
-  if current_path.respond_to? :should
->>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
+    if ( !current_query.nil? )
+      current_path += "?" + current_query
+    end
     current_path.should == path_to(page_name)
   else
     assert_equal path_to(page_name), current_path

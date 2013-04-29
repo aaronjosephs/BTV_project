@@ -2,8 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'haml'
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
 group :development do
   gem 'sqlite3', '1.3.5'
   gem 'debugger'   
@@ -16,16 +14,14 @@ end
 
 group :test do
   gem 'rspec-rails'
-
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels' #Virtually everyone still needs these.
-  gem 'capybara', '2.0.3'
+  gem 'capybara'
   gem 'database_cleaner'
+  gem 'selenium-webdriver' #Javascript testing.
 end
 
 group :development, :test do
-  gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'database_cleaner'
   gem 'launchy'
   gem 'minitest'
 end
