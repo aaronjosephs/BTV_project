@@ -1,6 +1,7 @@
 class BoardController < ApplicationController
 
 	def index
+		 @about_active = "active"
 		 @query = params[:production]
 		 puts @query
 		 which_board = "executive"
