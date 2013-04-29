@@ -55,7 +55,7 @@ BoardInfo.create!(:user_id => user1.id, :title => "Downtime Director", :board =>
 user1 = User.create!(:name => "Phil Kral", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Mobile Unit", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Mobile Unit of BTV!")
 
-user1 = User.create!(:name => "Danielle Micceri", email => "btv@TheNewBTV.com")
+user1 = User.create!(:name => "Danielle Micceri", :email => "btv@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title => "Aesthetics Director", :board => "production", :photo => "/assets/Contact.jpg", :description => "The Newly Elected Aesthetics Director of BTV!")
 
 
