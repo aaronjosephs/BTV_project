@@ -10,6 +10,7 @@ Feature: hamburger button
   I want to click on the hamburger button to show the navigation bar
 
 Background:
+  Given Blah Blah, javascript is hard to test, leaving this as pending.
   Given I am on the home page
   And the navigation bar is prepared to respond
 
