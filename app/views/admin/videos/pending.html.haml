@@ -1,0 +1,18 @@
+.container
+  .span10.offset1
+    %h1.text-center
+      Unapproved User Videos
+    %table.table.table-hover
+      %thead
+        %tr
+          %th Title
+          %th Description
+          %th URL
+      %tbody
+        %tr
+          %td= link_to "Unapproved Video 1", admin_video_path(1)
+          %td This is the second video.
+          %td= link_to "Here", "http://www.google.com"
+
+    <br>
+    = link_to "Back to Admin", admin_root_path

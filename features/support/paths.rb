@@ -13,30 +13,30 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-<<<<<<< HEAD
-
     when /^Production Board/
       "/board?production=yes"
 
-    when /^the home\s?page$/
+    when /the home page/
       '/'
 
-    when /^board page/
-      "/board"
+    when /board page/
+      '/board'
 
     when /^AboutMe/
       "/"
 
+    when /admin dashboard/
+      admin_root_path
 
-    when /^the home\s?page$/
-      '/'
+    when /admin users? page/
+      admin_users_path
 
+    when /admin unapproved videos page/
+      admin_pending_videos_path
 
-=======
-    when /^the home\s?page$/
-      '/'
+    when /admin approved videos page/
+      admin_videos_path
 
->>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -45,36 +45,43 @@ module NavigationHelpers
 
     else
       begin
-        page_name =~ /^the (.*) page$/
-<<<<<<< HEAD
+        page_name =~ /^(the )?(.*)page$/
 
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
+###########################################################
+        #We seem to be having an editting war here.
+        #why does this need to be here and not below
+        #where I've placed it?
+        #path_components = $1.split(/\s+/)
+        #self.send(path_components.push('path').join('_').to_sym)
+##########################################################
 
 
-        # But add mappings of the form: the ???? page  here.
+        # But add mappings of the form: "the ???? page" here.
+        # Also accepts just "???? page" or "the ????page".
         # The else case may work for expressions defined with
-        # convention over configuration.
-        case $1
+        # convention over configuration, but I wouldn't rely on it.
+        case $2.downcase
 
-        when 'Home'
+        when /^home$/
           '/'
 
-        when 'About'
+        when /^about$/
           '/about'
 
-        when 'Board'
-          pending "pending board page integration"
+        when /^board$/
+          board_path
+
+        when /^shows$/
+          '/shows'
+
+        when /^admin$/
+          '/admin'
 
         else
-          path_components = $1.split(/\s+/)
+          path_components = $2.split(/\s+/)
           self.send(path_components.push('path').join('_').to_sym)
         end
 
-=======
-        path_components = $1.split(/\s+/)
-        self.send(path_components.push('path').join('_').to_sym)
->>>>>>> a1c3af35cdc9d97c6b3f48433da85039d489cd82
       rescue NoMethodError, ArgumentError
         raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
           "Now, go and add a mapping in #{__FILE__}"

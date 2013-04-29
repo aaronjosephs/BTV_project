@@ -2,9 +2,7 @@ BTVProject::Application.routes.draw do
   match "/board" => "board#index"
 
   resources :videos
-
   resources :posts
-
 
   match "about" => "home#about"
   match "contact" => "home#contact"
@@ -20,9 +18,20 @@ BTVProject::Application.routes.draw do
   match "Gametime!" => "home#Gametime!"
   match "What_4" => "home#What_4"
   match "Comics_Anonymous" => "home#Comics_Anonymous"
-  root :to => "home#index"
 
-  # The priority is based upon order of creation:
+  namespace :admin do
+    root :to => "dashboard#index"
+    resources :users, :except => ['new', 'create', 'edit']
+    resources :videos, :except => ['new', 'create', 'edit'] do
+      member do
+        put "approve"
+      end
+    end
+    match "/pending" => "videos#pending", :as => "pending_videos"
+  end
+
+  root :to => "home#index"
+ # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
