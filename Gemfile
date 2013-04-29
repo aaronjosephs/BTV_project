@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'haml'
+gem "google_calendar", "~> 0.3.0"
+
 group :development do
   gem 'sqlite3', '1.3.5'
   gem 'debugger'   
@@ -16,7 +18,7 @@ group :test do
   gem 'rspec-rails'
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels' #Virtually everyone still needs these.
-  gem 'capybara'
+  gem 'capybara', '2.0.3'
   gem 'database_cleaner'
   gem 'selenium-webdriver' #Javascript testing.
 end
