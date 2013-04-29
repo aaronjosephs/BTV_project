@@ -4,6 +4,6 @@
   .span3.offset1
     %h5 Dashboard
     %ul.nav.nav-tabs.nav-stacked
-      %li= link_to "Users", :controller => "admin/content", :action => "show_users"
-      %li= link_to "User Videos", :controller => "admin/content", :action => "show_users_videos"
-      %li= link_to "Pending Videos", :controller => "admin/content", :action => "show_pending_videos"
+      %li= link_to "Users", admin_users_path
+      %li= link_to "User Videos", admin_videos_path
+      %li= link_to "Pending Videos", admin_pending_videos_path

@@ -11,19 +11,17 @@
       %tbody
         -# - @users.each do |user|
         %tr
-          %td= link_to "Ima User", admin_edit_user_path(0)
+          %td= link_to "Ima User", admin_user_path(0)
           %td= mail_to "ima@binghamton.edu"
           %td User
         %tr
-          %td= link_to "Adam In", admin_edit_user_path(1)
+          %td= link_to "Adam In", admin_user_path(1)
           %td= mail_to "Position@TheNewBTV.com"
           %td Eboard
         %tr
-          %td= link_to "Alex Kleiner", admin_edit_user_path(2)
+          %td= link_to "Alex Kleiner", admin_user_path(2)
           %td= mail_to "President@TheNewBTV.com"
           %td President
 
     <br>
-    = link_to "Create user", :action => "create_user"
-    <br>
-    = link_to "Back to Admin", :action => "index"
+    = link_to "Back to Admin", admin_root_path
