@@ -1,5 +1,5 @@
 module Admin; end
-class Admin::ContentController < ApplicationController
+class Admin::DashboardController < ApplicationController
 
   #See lib/admin_module.rb
   include AdminModule
