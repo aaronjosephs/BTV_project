@@ -1,3 +1,4 @@
 %h1 Schedule
-%p= @cal.events
+- @cal.each do |event|
+  %p= event.title
 
