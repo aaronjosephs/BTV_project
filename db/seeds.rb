@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-# Used to Seed DB for the Baord Page
+# Used to Seed DB for the Board Page Memebers will be displayed in the order they are entered in the DB
 #EBoard
 user1 = User.create!(:name => "Mike Zegreda", :email => "president@TheNewBTV.com")
 BoardInfo.create!(:user_id => user1.id, :title=> "President", :board => "executive", :photo => "/assets/Contact.jpg", :description => "The Newly Elected President of BTV!") 

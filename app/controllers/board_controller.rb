@@ -1,9 +1,8 @@
 class BoardController < ApplicationController
 
 	def index
-		 @about_active = "active"
+		 @board_active = "active"
 		 @query = params[:production]
-		 puts @query
 		 which_board = "executive"
 		 unless (@query.nil?) then which_board = "production" end
 		 all_members = BoardInfo.all_members_of_board(which_board)
