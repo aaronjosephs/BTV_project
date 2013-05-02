@@ -1,4 +1,7 @@
 %h1 Schedule
-- @cal.each do |event|
-  %p= event.title
+- if @schedule == 1
+  %p Schedule empty
+- else
+  - @schedule.each do |event|
+    %p= event.title
 
