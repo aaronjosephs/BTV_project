@@ -15,24 +15,34 @@
     %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"}
     :javascript
       window.jQuery || document.write('<\/script>')
-              
-              
-              
-              
+              // Get latest video from the "TheNewBTV6" channel
+              var videoID;
+              $.get('https://gdata.youtube.com/feeds/api/users/TheNewBTV6/uploads?max-results=1&orderby=published&v=2&alt=jsonc',
+              //stolen from http://www.acuriousanimal.com/code/youtube_embed/index.html
+              function(response) {
+                  if(response.data && response.data.items) {
+                      var items = response.data.items;
+                      if(items.length>0) {
+                          var item = items[0];
+                          videoID = item.id;
+                          console.log("Latest ID: '"+videoID+"'");
+                }
+            }
+        });
                 // Load the IFrame Player API code asynchronously.
                 var tag = document.createElement('script');
                 tag.src = "https://www.youtube.com/player_api";
                 var firstScriptTag = document.getElementsByTagName('script')[0];
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       
-                // Replace the 'FeaturedShow' element with an  and
+                // Replace the 'FeaturedShow' element with an  iframe and
                 // YouTube player after the API code downloads.
                 var player;
                 function onYouTubePlayerAPIReady() {
                   player = new YT.Player('FeaturedShow', {
                     height: '390',
                     width: '640',
-                    videoId: 'IDBkg8JJRHk',
+                    videoId: videoID,
                     enablejsapi: '1',
                     controls: '2'
                   });
