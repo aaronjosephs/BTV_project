@@ -1,0 +1,18 @@
+.container
+  .span10.offset1
+    %h1.text-center
+      = "#{@user.name}'s Position"
+    = form_for @board_info, :url => admin_user_board_info_path(@user), :method => :put do |f|
+      = f.label :board, "Board"
+      = f.select :board, ["executive", "production"]
+      = f.label :title, "Title"
+      = f.text_field :title
+      = f.label :description, "Description"
+      = f.text_area :description
+      = f.label :photo, "We should put an upload photo option here."
+      %br
+      = f.submit "Save Changes"
+    %br
+    = button_to "Demote User", admin_user_board_info_path(@user), :method => :delete,
+      :confirm => "This will delete all board information for this user. Demote this user?"
+    = link_to "Back to user page", admin_user_path(@user)

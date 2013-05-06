@@ -3,8 +3,6 @@
     %h1.text-center
       = "#{@user.name}'s Information"
 
-    -# This should probably be a form instead of a form tag,
-    -# but I'm avoiding accessing the models for this iteration.
     = form_for @user, :url => admin_user_path(params[:id]), :method => :put do |f|
       = f.label "name", "Name:"
       = f.text_field "name"
@@ -15,4 +13,11 @@
       %br
       = f.submit "Submit Changes", :confirm => "Change this user's information?"
     %br
+
+    = @description
+    %br
+    = link_to "Change Status", admin_user_board_info_path(@user)
+    %br
+    %br
+
     = link_to "Back to users list", admin_users_path

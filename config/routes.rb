@@ -17,9 +17,6 @@ BTVProject::Application.routes.draw do
   resources :posts
 
 
-
-
-
   match "about" => "home#about"
   match "contact" => "home#contact"
   match "shows" => "home#shows"
@@ -43,7 +40,9 @@ BTVProject::Application.routes.draw do
 
   namespace :admin do
     root :to => "dashboard#index"
-    resources :users, :except => ['new', 'create', 'edit']
+    resources :users, :except => ['new', 'create', 'edit'] do
+      resource :board_info, :except => ['new', 'create', 'edit']
+    end
     resources :videos, :except => ['new', 'create', 'edit'] do
       member do
         put "approve"

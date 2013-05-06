@@ -9,6 +9,7 @@ Background:
   | name     | email                  |
   | Ima User | ima@binghamton.edu     |
   | Adam In  | position@TheNewBTV.com |
+  And I am logged in as an administrator
 
 Scenario: user table exists
   Given I am on the admin user page
@@ -22,7 +23,5 @@ Scenario: change information
   When I fill in "Name" with "Ahma User"
   And I fill in "Email" with "auser0@binghamton.edu"
   And I press "Submit Changes"
-  Then I should see "Ahma User"
-  And I should not see "Ima User"
-  And I should see "auser0@binghamton.edu"
-  And I should not see "ima@binghamton.edu"
+  Then the "Name" field should contain "Ahma User"
+  And the "Email" field should contain "auser0@binghamton.edu"

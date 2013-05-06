@@ -8,6 +8,7 @@ class Admin::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @description = "#{@user.name} is currently #{@user.description}."
   end
 
   def update
