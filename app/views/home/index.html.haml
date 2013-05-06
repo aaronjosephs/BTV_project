@@ -29,8 +29,6 @@
             }
         });
                 // Load the IFrame Player API code asynchronously.
-                
-      
                 // Replace the 'FeaturedShow' element with an  iframe and
                 // YouTube player after the API code downloads.
                 var player;
@@ -38,13 +36,13 @@
                 tag.src = "https://www.youtube.com/player_api";
                 var firstScriptTag = document.getElementsByTagName('script')[0];
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                //fucntion called when the Yotube API has been loaded
+                //function called when the Yotube API has been loaded
                 function onYouTubePlayerAPIReady() {
                   if(typeof videoID === 'undefined') {
-                    console.log("AJAX not back yet, waiting 500ms more");
+                    console.log("AJAX not back yet, waiting 800ms more");
                     window.setTimeout(function(){
                         if(typeof videoID === 'undefined') videoID = "_OAdP32FTLE"; createPlayer(); 
-                    },700);
+                    },800);
                   }
                   else
                     createPlayer();
