@@ -6,13 +6,19 @@ class ScheduleController < ApplicationController
 		@t =Time.now
 		@block = 60*60*12
 		@t = @t + (@block)
-		@cal = @cal.find_events_in_range(@current_time,@t )
-		while(@cal ==nil)
-			@t = @t + (@block)
-			@cal = @cal.find_events_in_range(@current_time,@t )
+		@schedule = @cal.find_events_in_range(@current_time,@t )
+		#@count = 0
+		#while(@schedule.nil? or @count < 3)
+			#@count = @count + 1
+			#@t = @t + (@block)
+			#@schedule = @cal.find_events_in_range(@current_time,@t )
+		#end
+		if @schedule.nil?	
+			@schedule = 1		
+		else		
+			@tmp = @schedule.find_all { |e| e and e.start_time }
+			@schedule = @tmp.uniq.sort_by { |obj| obj.start_time }
 		end
-		@tmp = @cal.find_all { |e| e and e.start_time }
-		@cal = @tmp.uniq.sort_by { |obj| obj.start_time }
   end
 
 	def more
