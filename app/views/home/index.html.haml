@@ -30,14 +30,19 @@
             }
         });
                 // Load the IFrame Player API code asynchronously.
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/player_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                
       
                 // Replace the 'FeaturedShow' element with an  iframe and
                 // YouTube player after the API code downloads.
                 var player;
+                var tag = document.createElement('script');
+                  tag.src = "https://www.youtube.com/player_api";
+                  var firstScriptTag = document.getElementsByTagName('script')[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                if(typeof videoID === 'undefined') {
+                  videoID = "_OAdP32FTLE";
+                  console.log("Response from ajax request did not come in time, video defaulted");
+                }
                 function onYouTubePlayerAPIReady() {
                   player = new YT.Player('FeaturedShow', {
                     height: '390',
