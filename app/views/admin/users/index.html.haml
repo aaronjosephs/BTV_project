@@ -7,21 +7,12 @@
         %tr
           %th Name
           %th Email
-          %th Role
+          %th Position
       %tbody
-        -# - @users.each do |user|
-        %tr
-          %td= link_to "Ima User", admin_user_path(0)
-          %td= mail_to "ima@binghamton.edu"
-          %td User
-        %tr
-          %td= link_to "Adam In", admin_user_path(1)
-          %td= mail_to "Position@TheNewBTV.com"
-          %td Eboard
-        %tr
-          %td= link_to "Alex Kleiner", admin_user_path(2)
-          %td= mail_to "President@TheNewBTV.com"
-          %td President
+        - @users.each do |user|
+          %tr
+            %td= link_to "#{user.name}", admin_user_path(user)
+            %td= mail_to "#{user.email}"
 
     <br>
     = link_to "Back to Admin", admin_root_path

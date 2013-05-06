@@ -19,5 +19,19 @@ class BoardInfo < ActiveRecord::Base
 		where(:board => string)
 	
 	end
-  
+
+  def self.find_or_create(user)
+    if user.board_infos.empty?
+      @board_info = self.new
+      user.board_infos << @board_info
+      @board_info
+    else
+      user.board_infos[0]
+    end
+  end
+
+  def full_title
+    "#{self.title.capitalize} for the #{self.board.capitalize} Board"
+  end
+
 end
