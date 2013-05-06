@@ -48,6 +48,11 @@
               %li= link_to "User Videos", admin_videos_path
               %li= link_to "Pending Videos", admin_pending_videos_path
           / /.nav-collapse
+
+    - if flash[:notice]
+      #notice.span10= flash[:notice]
+    - elsif flash[:warning]
+      #warning.span10= flash[:warning]
  
     = yield
   %hr
