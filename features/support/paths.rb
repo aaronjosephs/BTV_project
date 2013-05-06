@@ -36,13 +36,12 @@ module NavigationHelpers
 
     when /admin dashboard/
       admin_root_path
-
-    when /admin users? page/
+    when /admin users? page$/
       admin_users_path
-
+    when /admin user page for "(.*)"$/
+      admin_user_path(User.where("name = ?", $1).first)
     when /admin unapproved videos page/
       admin_pending_videos_path
-
     when /admin approved videos page/
       admin_videos_path
 
