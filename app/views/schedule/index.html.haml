@@ -1,7 +1,22 @@
 %h1 Schedule
 - if @schedule == 1
+  .container
+    %iframe{:frameborder => "0", :height => "600", :scrolling => "no", :src => "https://www.google.com/calendar/embed?title=BTV&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=konj31s6tpnka54ptkrmrriiubfn8hrf%40import.calendar.google.com&color=%23B1365F&ctz=America%2FNew_York", :style => " border-width:0 ", :width => "800"}
   %p Schedule empty
 - else
-  - @schedule.each do |event|
-    %p= event.title
-
+  %table{:border => "8", :width => "100%"}
+    %thead
+      %tr
+        %th Title
+        %th	Start Time
+        %th End Time
+    %tbody
+    - @newerSched = @schedule.each_slice(1).to_a
+    - @newerSched.each do |row|
+      %tr
+      - row.each do |col|
+        %td= col.title
+        -@sTime = Time.parse(col.start_time)
+        %td= @sTime.strftime('%I:%M %p ')
+        -@eTime = Time.parse(col.end_time)
+        %td= @eTime.strftime('%I:%M %p ')
