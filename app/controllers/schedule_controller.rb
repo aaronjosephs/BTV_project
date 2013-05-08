@@ -4,7 +4,8 @@ class ScheduleController < ApplicationController
                            :password => 'bingbtv2013', :calendar => 'TheNewBTV' )
 		@current_time = Time.now
 		@t =Time.now
-		@block = 60*60*6
+		@block = 60*60*3
+		@current_time = @current_time - @block
 		@t = @t + (@block)
 		@schedule = @cal.find_events_in_range(@current_time,@t )
 		#@count = 0

@@ -3,6 +3,7 @@ BTVProject::Application.routes.draw do
   get "schedule/index"
 
   match "/board" => "board#index"
+	match "/schedule" => "schedule#index"
 
   resources :videos
   get "sessions/new"
