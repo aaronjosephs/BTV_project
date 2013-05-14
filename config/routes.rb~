@@ -1,10 +1,11 @@
 BTVProject::Application.routes.draw do
 
+  get "schedule/index"
+
   match "/board" => "board#index"
+	match "/schedule" => "schedule#index"
 
   resources :videos
-<<<<<<< HEAD
-
   get "sessions/new"
 
   get "sessions/create"
@@ -17,11 +18,6 @@ BTVProject::Application.routes.draw do
   resources :posts
 
 
-
-=======
-  resources :posts
-
->>>>>>> 8b65308a71f98f83f0ff86aeeadb8af104b9c36c
   match "about" => "home#about"
   match "contact" => "home#contact"
   match "shows" => "home#shows"
@@ -37,19 +33,17 @@ BTVProject::Application.routes.draw do
   match "What_4" => "home#What_4"
   match "Comics_Anonymous" => "home#Comics_Anonymous"
 
-<<<<<<< HEAD
-
   # Redirects authentication callback for omniAuth
   get   '/login', :to => 'sessions#new', :as => :login
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   resources :identities
 
-  # The priority is based upon order of creation:
-=======
   namespace :admin do
     root :to => "dashboard#index"
-    resources :users, :except => ['new', 'create', 'edit']
+    resources :users, :except => ['new', 'create', 'edit'] do
+      resource :board_info, :except => ['new', 'create', 'edit']
+    end
     resources :videos, :except => ['new', 'create', 'edit'] do
       member do
         put "approve"
@@ -60,7 +54,6 @@ BTVProject::Application.routes.draw do
 
   root :to => "home#index"
  # The priority is based upon order of creation:
->>>>>>> 8b65308a71f98f83f0ff86aeeadb8af104b9c36c
   # first created -> highest priority.
 
   # Sample of regular route:
