@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
 end
 
 def create
+	@login_active = "active"
 	auth_hash = request.env['omniauth.auth']
- 
 	@authentication = Authentication.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
 	if @authentication
 		render :text => "Welcome back #{@authentication.user.name}! You have already signed up."

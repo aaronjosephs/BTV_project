@@ -39,6 +39,7 @@
                 //function called when the Yotube API has been loaded
                 function onYouTubePlayerAPIReady() {
                   if(typeof videoID === 'undefined') {
+                    //Would be nice to do this via delegation...
                     console.log("AJAX not back yet, waiting 800ms more");
                     window.setTimeout(function(){
                         if(typeof videoID === 'undefined') videoID = "_OAdP32FTLE"; createPlayer(); 
