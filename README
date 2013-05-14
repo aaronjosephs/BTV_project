@@ -1,12 +1,16 @@
 B-TV 6 Project!
-
+Project is live at: btv6.herokuapp.com
 
 BTV -- Binghamton University's student-run television station.
+
+-Built using Rails and Twitter Bootstrap
 
 I'm proposing we keep some documentation here on assumptions made by cucumber about the views.
 Look these over if you're modifying the front end, and remember to run tests to make sure you're not breaking anything.
 CUCUMBER ASSUMPTIONS
 
   On any page containing the navigation bar: 
+- Calendar SHould pull latest data from the Google Calendar API
+- Youtube video on main screen is the latest on the Youtube BTV6 channel. This is done via ajax calls to the Youtube API
 - the navigation bar should be contained within something having the id #navbar
 - the BTV logo should have the id #BTV_logo
