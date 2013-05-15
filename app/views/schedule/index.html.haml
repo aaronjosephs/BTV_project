@@ -1,12 +1,14 @@
-%h1 Schedule
+
 - if @schedule == 1
   .container
+  %h1 Schedule
     %iframe{:frameborder => "0", :height => "600", :scrolling => "no", :src => "https://www.google.com/calendar/embed?title=BTV&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=600&wkst=1&bgcolor=%23FFFFFF&src=konj31s6tpnka54ptkrmrriiubfn8hrf%40import.calendar.google.com&color=%23B1365F&ctz=America%2FNew_York", :style => " border-width:0 ", :width => "800"}
   %p Schedule empty
   :javascript 
     console.log('Error retrieving Calendar. Defaulting back to iframe');
 - else
   .container
+  %h1 Schedule
     %table{:class =>"table table-striped table-hover",  :width => "100%"}
       %thead
         %tr
