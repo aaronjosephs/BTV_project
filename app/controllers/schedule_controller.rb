@@ -1,7 +1,7 @@
 class ScheduleController < ApplicationController
   def index
 		@cal = Google::Calendar.new(:username => 'fauxbtv@gmail.com',
-                           :password => 'bingbtv2013', :calendar => 'TheNewBTV' )
+                           :password => 'bingbtv2013', :calendar => 'BTV' )
 		@current_time = Time.now
 		@t =Time.now
 		@block = 60*60*3
