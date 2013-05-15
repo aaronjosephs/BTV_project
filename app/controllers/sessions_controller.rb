@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def new
-end
+  	@login_active = "active"
+  end
 
 def create
 	@login_active = "active"
@@ -18,6 +19,7 @@ end
 
 
   def failure
+  	@login_active = "active"
   redirect_to login_path, alert: "Authentication failed, please try again."
   end
 
