@@ -64,3 +64,6 @@ body{
     background-image: url(/assets/textured_paper.png);
     background-repeat;
 }
+table {
+	background: white;
+}
